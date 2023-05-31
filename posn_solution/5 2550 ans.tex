@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2550}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(\dfrac{2 + \sqrt 3 }{4}\)
+	\item \(\dfrac{2A}{\pi}\sqrt{\dfrac{k}{m}}\)
+	\item \(x=R(\theta+\sin\theta)\)
+	\item \(\omega R\)
+	\item \(\omega R(1+\cos\omega t)\)
+	\item \(R\omega t\)
+	\item \(\dfrac{m_2E}{m_1+m_2}\)
+	\item \(\dfrac{m}{M}\left( {u_0  - u_1 } \right)\)
+	\item \(\dfrac{m^2 \left( {u_0  - u_1 } \right)^2 }{2\ell M}\)
+	\item \((M-\rho V)g\)
+	\item \(\dfrac{1}{2}\dfrac{m_1m_2}{m_1+m_2}u_0^2\)
+	\item \(\dfrac{q^2}{2\pi \varepsilon_0mu_0^2}\)
+	\item \(\dfrac{R\mu\sqrt{\mu^2-1}}{\mu^2-1}\)
+	\item \(\dfrac{R\mu}{\mu -1}\)
+	\item \SI{0}{C}
+	\item \(\dfrac{\mathcal{E}}{16}\)
+	\item \(\dfrac{c\lambda}{c-u\cos \theta}\)
+	\item \(100\sqrt{1+\dfrac{\alpha AY\Delta T}{F}}\,\si{\%}\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

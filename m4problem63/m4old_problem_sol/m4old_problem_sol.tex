@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\DeclareMathOperator{\cosec}{cosec}
+\pagenumbering{gobble}
+
+\begin{document}
+\begin{center}
+	\textbf{{\Large เฉลย ข้อ 1}}
+\end{center}
+\begin{enumerate}
+	\item \begin{align*}
+		      W_F          & =\;\text{พิื้นที่ใต้กราฟ}   \\
+		      W            & =\frac{1}{2}(2L)(2mg) \\
+		      \therefore W & =2mgL
+	      \end{align*}
+	\item \begin{align*}
+		      W_f            & =-\mu NL  \\
+		      \therefore W_f & =-\mu mgL
+	      \end{align*}
+	\item \begin{align*}
+		      \frac{1}{2}mv^2 & =W_F+W_f           \\
+		      \frac{1}{2}mv^2 & =2mgL-\mu mgL      \\
+		      v^2             & =4gL-2\mu gL       \\
+		      \therefore v    & =\sqrt{2gL(2-\mu)}
+	      \end{align*}
+\end{enumerate}
+\newpage
+\begin{center}
+	\textbf{{\Large เฉลย ข้อ 2}}\\
+\end{center}
+พิจารณา มวล \(m\)\\
+กำหนด ช่วง 1 คือช่วงก่อนถึงจุด A, ช่วง 2 คือช่วงเริ่มเกี่ยวปลายสปริงและช่วง 3 คือช่วงที่ลอยขึ้นสูงสุด\\
+\begin{enumerate}
+	\item 
+	      \begin{align*}
+	      	W_{\text{nc}}&=E_2-E_1\\
+		      -\mu mg\ell&=\frac{1}{2}mv^2-\frac{1}{2}mu_0^2 \\
+		      -2\mu g\ell&=v^2-6\mu g\ell                    \\
+		      v^2&=4\mu g\ell                                \\
+		      \therefore v&=\sqrt{4\mu g\ell}                \\
+	      \end{align*}
+	\item 
+	      \begin{align*}
+	      	W_{\text{nc}}&=E_3-E_2\\
+		      0&=\left( \frac{1}{2}kx^2+mgy\right) -\frac{1}{2}mv^2                                               \\
+		      \frac{1}{2}m(4\mu g\ell)
+		      &=\frac{1}{2}\left( \frac{\mu mg}{\ell}\right) \left( 2\ell-\ell\right) ^2+mgy \\
+		      4\mu \ell&=\frac{\mu}{\ell}\left( \ell\right) ^2+2y                                          \\
+		      4\mu \ell&=\mu \ell+2y                                                       \\
+		      \therefore y&=\frac{3\mu \ell}{2}
+	      \end{align*}
+\end{enumerate}
+\newpage
+\begin{center}
+	\textbf{{\Large เฉลย ข้อ 3}}
+\end{center}
+\begin{enumerate}
+	\item \begin{align*}
+		      W_{\text{nc}}                       & =E_\text{f}-E_\text{i}       \\
+		      F\Delta x                           & =E_\text{f}-E_\text{i}       \\
+		      mg\left(\frac{H}{\sin\alpha}\right) & =\frac{1}{2}mv^2+mgH         \\
+		      \therefore v                        & =\sqrt{2gH(\cosec \alpha-1)}
+	      \end{align*}
+	\item \begin{align*}
+		      P            & =\frac{W}{\Delta t}            \\
+		                   & =\frac{F\Delta x}{\Delta t}    \\
+		                   & =Fv                            \\
+		      \therefore P & =mg\sqrt{2gH(\cosec \alpha-1)}
+	      \end{align*}
+	\item \begin{align*}
+		      W_{\text{nc}}                                                                           & =E_\text{f}-E_\text{i}                 \\
+		      F\left( \frac{H}{\sin\alpha}\right) -\mu mg\cos\alpha\left( \frac{H}{\sin\alpha}\right) & =\left( \frac{1}{2}mv^2+mgH\right) -0  \\
+		      F\left( \frac{H}{\sin\alpha}\right) -\mu mg\cos\alpha\left( \frac{H}{\sin\alpha}\right) & =\frac{1}{2}(2gH(\cosec \alpha-1))+mgH \\
+		      F\left( \frac{H}{\sin\alpha}\right)                                                     & =mgH(\cosec\alpha+\mu\cot\alpha)       \\
+		      F                                                                                       & =mg(1+\mu\cos\alpha)                   \\
+		      \therefore \text{เป็น} \;\frac{mg(1+\mu\cos\alpha)}{mg}                                  & =1+\mu\cos\alpha\; \text{เท่า}
+	      \end{align*}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{4} 2554}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(\dfrac{a + b}{ \frac{a}{v_1} + \frac{b}{v_2} }\)
+	\item \(\left( \dfrac{v_1}{v_1 + v_2} \right)d\)
+	\item \(\dfrac{6}{3R + 4}\,\si{A}\)
+	\item \(\dfrac{ 3 \sqrt{2} }{4}\) เท่า
+	\item \(\dfrac{2ev_0}{g}\)
+	\item \(\dfrac{2ev_0}{g(1-e)}\)
+	\item \(9\) เท่า
+	\item \(\dfrac{R_1  R_2 }{ (R_1 + R_2)^2 }\)
+	\item สับ A ไปที่ 2 และ B ไปที่ 1
+	\item \SI{30}{\degree}
+	\item \(W \left( 1 + \dfrac{a}{g} \right)\)
+	\item \(4\arcsin\left( \dfrac{ \sin \theta}{ \mu} \right) - 2\theta\)
+	\item \(160\)
+	\item \( \dfrac{ \lambda_a \lambda_b}{ \lambda_a - \lambda_b}\)
+	\item \(\dfrac{ \lambda_a \lambda_b}{ 2(\lambda_a - \lambda_b)}\)
+	\item \(\sqrt{ 2\left( \dfrac{ \rho V}{m} - 1\right) gh}\)
+	\item 1 ชั่วโมง 5 นาที 27 วินาที
+	\item \(\dfrac{1}{2}mg\ell \alpha \Delta T\)
+	\item \(\sqrt{ v_\text{C}^2 + v_\text{T}^2 - 2v_\text{C} v_\text{T} \cos \theta }\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

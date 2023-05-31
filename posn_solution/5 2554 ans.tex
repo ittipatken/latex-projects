@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2554}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(\dfrac{2ev_{0}}{g(1-e)}\)
+	\item \(\dfrac{3\ell}{5}\)
+	\item \(\dfrac{m_{2}v_{0}}{m_{1} + m_{2}}\)
+	\item \(3mg\)
+	\item \(\dfrac{Q}{8}\)
+	\item \(\SI{2.91}{\%}\)
+	\item \(\SI{6.19}{\%}\)
+	\item \(\arcsin (\mu \sin A) - A \)
+	\item \(\pi +2\theta - 6\arcsin \left(\dfrac{\sin \theta}{\mu }\right)\)
+	\item \(2\pi  \sqrt{\dfrac{\ell^{3}}{G(m_{1}+m_{2})}}\)
+	\item \(\dfrac{100C_{2}}{C_{1}+C_{2}}\,\si{\%}\)
+	\item \(\sqrt{\dfrac{4\gamma g}{\rho }}\)
+	\item \(\dfrac{2000R^{2}g}{9\eta }\)
+	\item \(\dfrac{c-u \cos \theta}{c}f_{0}\)
+	\item \(\dfrac{\lambda _{1}\lambda _{2}}{\lambda _{1} - \lambda _{2}}\)
+	\item \(2A \sin \dfrac{\pi x(\lambda _{1} + \lambda _{2})}{\lambda _{1}\lambda _{2}} \cos \dfrac{\pi x (\lambda _{1} - \lambda _{2})}{\lambda _{1}\lambda _{2}}\)
+	\item \(\dfrac{Q^{2} \pi}{48\epsilon _{0}}\)
+	\item \(\dfrac{Q}{4 \pi \epsilon _{0} } \ln 2\)
+	\item \(\dfrac{\sqrt{P_{0}^{2} + 4 \rho gP_{0}h} - P_{0}}{2 \rho g}\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

@@ -1,0 +1,299 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+
+\setmainfont{CMU Serif}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+
+\newfontfamily{\thaifont}[Scale=MatchUppercase]{TH Sarabun Chula}
+\newfontfamily{\englishfont}{CMU Serif}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setTransitionTo{Thai}{\thaifont}
+\setTransitionFrom{Thai}{\thaifont}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{amsmath,amsthm,amssymb}
+
+\begin{document}
+	
+	\section*{สรุปความรู้จลนศาสตร์}
+เวกเตอร์เฉลี่ยของความเร็วและความเร่งของอนุภาค
+~\\ $\bullet <\vec{v}> = \dfrac{\Delta \vec r}{\Delta t},\; <\vec{v}>= \dfrac{\Delta \vec v}{\Delta t}$~\\
+$\Delta \vec r$ คือเวกเตอร์การกระจัด
+
+ความเร็วและความเร่งของอนุภาค
+~\\ $\bullet \vec v = \dfrac{d\vec r}{dt}, \; \vec a = \dfrac{d\vec v}{dt}$
+
+ความเร่งของอนุภาคที่จุดๆหนึ่งในแนวสัมผัสและตั้งฉากกับเส้นวิถีการเคลื่อนที่ ~\\ $\bullet a_\tau = \dfrac{dv_\tau}{dt}, \; a_n = \dfrac{v^2}{R}$
+$R$ คือรัศมีความโค้งของเส้นวิถีที่จุดนั้น
+
+
+ระยะทางที่อนุภาคเคลื่อนที่ได้ ~\\ $\bullet s = \int v dt$ 
+$v$ คือขนาดของเวกเตอร์ความเร็วของอนุภาค
+
+ ความเร็วเชิงมุมและความเร่งเชิงมุมของวัตถุแข็งเกร็ง~\\ 
+$\bullet \vec \omega = \dfrac{d\vec \phi}{dt}, \; \vec \alpha = \dfrac{d\vec \omega}{dt}$
+
+ความสัมพันธ์ระหว่างปริมาณเชิงเส้นและปริมาณเชิงมุมสำหรับวัตถุแข็งเกร็งที่กำลังหมุน~\\ 
+$\bullet \vec v = \vec \omega \times \vec r, \;\;\; a_n = \omega ^2 R, \; |a_\tau| = \alpha R$\\
+\indent $\vec r$ คือเวกเตอร์ตำแหน่งของจุดที่กำลังพิจารณาเทียบกับจุดใดๆบนแกนหมุนและ\\
+\indent $R$ คือระยะห่างของจุดจากแกนหมุน
+
+\pagebreak
+
+	\section*{สรุปความรู้เรื่องอุณหพลศาสตร์}
+2.1 สรุปความรู้เรื่องสมการสถานะของก๊าซ
+
+~\\
+$\bullet$  กฎของก๊าซอุดมคติ
+$\displaystyle PV=\frac{m}{M}RT$
+โดยที่ M คือมวลโมลาร์
+
+~\\ $\bullet$  สมการบาโรเมทริก
+$\displaystyle P=P_0e^{\frac{-Mgh}{RT}}$
+เมื่อ $P_0$คือความดันที่ระดับ $h=0$
+
+~\\ $\bullet$ สมการสถานะของก๊าซแวน เดอร์ วาลส์
+$\displaystyle(P_{van}+\frac{a^2}{V_M^2})(V_M-b)=nRT$
+เมื่อ $V_M$คือปริมาตรของก๊าซ $1 \mbox{ mol}$ ซึ่งขึ้นกับความดันและอุณหภูมิ
+
+\noindent 2.2 สรุปความรู้เรื่อง กฏข้อที่หนึ่งของเทอร์โมไดนามิกส์ และค่าความจุความร้อน
+
+~\\ $\bullet$  กฏข้อที่ 1 ของเทอร์โมไดนามิกส์
+$Q=\Delta U+W$
+เมื่อ $\Delta$ Uเป็นพลังงานภายในที่เพิ่มขึ้นของระบบ
+
+~\\ $\bullet$ งานที่ทำโดยระบบ
+$W=\int pdV$
+
+~\\ $\bullet$  พลังงานภายในของระบบ
+$U=\displaystyle{\frac{m}{M}}C_VT=\displaystyle{\frac{m}{M}}\displaystyle{\frac{RT}{\gamma -1}}=\displaystyle{\frac{pV}{\gamma -1}}$
+
+ค่าความจุความร้อนต่อโมล ในกระบวนการ โพลีโทรปิก$(pV^n=const)$
+$C=\displaystyle{{\gamma -1}}-\displaystyle{\frac{T}{n-1}}=\displaystyle{\frac{(n-\gamma)R}{(n-1)(\gamma -1)}}$
+
+~\\ $\bullet$ พลังงานภายใน ของก๊าซแวน เดอ วาลส์ 1โมล
+$U=C_VT-\displaystyle{\frac{a}{V_M}}$
+โดยที่ $V_M$เป็นปริมาตรของก๊าซ $1$ โมล
+
+2.3 สรุปความรู้เรื่องทฤษฎีจลย์ของก๊าซ,กฎของโบลซ์แมนและ Maxwell's distribution
+
+~\\ $\bullet$ สมการสภาวะของก๊าซอุดมคติ (Equation of an ideal gas state)
+p=nkT
+
+~\\ $\bullet$ พลังงานเฉลี่ยของโมเลกุล
+$<e>=\displaystyle{\frac{i}{2}}kT$
+โดยที่ iเป็นผลรวม degree of freedom ของการเลื่อนที่ การหมุน และการสั่น
+
+~\\ $\bullet$ Maxwellian distribution
+$dN(v_x)=N(\displaystyle {\frac{m}{2\pi kT}})^{\frac{1}{2}}e^{\frac{-m{v_x}^2}{2kT}}d{v_x}
+dN(v)=N(\displaystyle {\frac{m}{2\pi kT}})e^{\frac{-m{v}^2}{2kT}}d{v}$
+
+~\\ $\bullet$ ความเร็วที่มีโอกาสพบอนุภาคมากที่สุด,ความเร็วเฉลี่ย,รากที่สองของความเร็วกำลังสองเฉลี่ย
+$v_p=\sqrt{\displaystyle {\frac{2kT}{m}}}; <v>=\sqrt{\frac{8kT}{\pi m}}; v_{sq}=\sqrt{\frac{3kT}{m}}$
+
+~\\ $\bullet$ สูตรของ โบลซ์แมน
+$n=n_0e^{\frac{U-U_0}{kT}}$
+โดยที่ Uเป็นr]พลังงานศักย์ของโมเลกุล
+
+2.4 สรุปความรู้เรื่องกฎข้อที่ 2 ของเทอร์โมไดนามิกส์ และเอนโทรปี
+
+~\\ $\bullet$ ประสิทธิภาพของวัฏจักรความร้อน
+$\eta=\displaystyle{\frac{W}{Q_1}}=1-\displaystyle{\frac{Q_2}{Q_1}}$
+โดยที่ $Q_1$เป็นความร้อน ที่วัฎจักรได้รับจากแหล่งที่มีอุณหภูมิสูงและ $Q_2$เป็นความร้อนที่วัฎจักรปล่อยไปให้แหล่งที่มีอุณหภูมิต่ำกว่า
+
+~\\ $\bullet$ ประสิทธิภาพของวัฏจักรคาโนต์
+$\eta=1-\displaystyle{\frac{T_2}{T_1}}$
+โดยที่ $T_1$เป็นอุณหภูมิ ของแหล่งที่มีอุณหภูมิสูงและ $T_2$เป็นอุณหภูมิของแหล่งที่มีอุณหภูมิต่ำกว่า
+
+~\\ $\bullet$ บทบัญญัติของคลอซิอุส
+$0>\int \displaystyle{\frac{\delta Q}{T}}$
+
+~\\ $\bullet$ เอนโทรปีที่เพิ่มขึ้นในระบบ
+$\Delta S>\int\displaystyle{\frac{\delta Q}T{}}$
+
+~\\ $\bullet$ ความสัมพันธ์พื้นฐานของเทอร์โมไดนามิกส์
+$TdS>dU+pdV$
+
+~\\ $\bullet$ ควาสัมพันธ์ระหว่าง เอนโทรปี กับ statistical weight (the thermodynamics)
+$S=k\ln\Omega$
+
+\pagebreak
+
+	\section*{สรุปความรู้เรื่องพลศาสตร์ไฟฟ้า}
+3.1 สรุปความรู้เรื่องสนามไฟฟ้าในสุญญากาศที่ไม่แปรตามเวลา
+
+~\\ $\bullet$    ความเข้มและศักย์ของสนามไฟฟ้าจากประจุจุด q :
+$\vec{E} = \dfrac{1}{4\pi\epsilon_{0}}\dfrac{q}{r^{3}}\vec{r}       \varphi = \dfrac{1}{4\pi\epsilon_{0}}\dfrac{q}{r}               (3.1a)$
+
+~\\ $\bullet$    ความสัมพันธ์ระหว่างความเข้มสนามไฟฟ้ากับศักย์ไฟฟ้า :
+$\vec{E} = -\vec{\nabla}\varphi                   (3.1b)$
+
+~\\ $\bullet$    ทฤษฎีบทของเกาส์ และการหมุนวนของเวกเตอร์ $\vec{E}$ :
+$\displaystyle \oint \vec{E}\cdot d\vec{A} = \dfrac{q}{\epsilon_{0}}            \displaystyle \oint \vec{E}\cdot d\vec{r} = 0                          (3.1c)$
+
+~\\ $\bullet$    ศักย์ไฟฟ้าและความเข้มสนามไฟฟ้าของขั้วคู่ไฟฟ้าของประจุจุดซึ่งมีโมเมนต์ไฟฟ้า $\vec{p}$ :
+$\varphi = \dfrac{1}{4\pi\epsilon_{0}}\dfrac{\vec{p}\cdot\vec{r}}{r^{3}}            E= \dfrac{1}{4\pi\epsilon_{0}}\dfrac{p}{r^{3}}\sqrt{1+3\cos^{2}\theta}                  (3.1d)$
+โดยที่ $\theta$ คือมุมระหว่างเวกเตอร์ $\vec{r}$ กับ $\vec{p}$
+
+~\\ $\bullet$    พลังงาน  W  ของขั้วคู่ไฟฟ้า  $\vec{p}$ ในสนามไฟฟ้าภายนอก และทอร์ก $\vec{T}$ กระทำต่อขั้วคู่ไฟฟ้า :
+$W=-\vec{p}\cdot\vec{E}                  \vec{T} = \vec{p}\times\vec{E}$              (3.1e)
+
+~\\ $\bullet$    แรง $\vec F$ ที่กระทำต่อขั้วคู่ไฟฟ้า และเงาฉายของมัน $F_{x} :
+\vec{F} = p\dfrac{\partial \vec{E}}{\partial l}                F_{x} = \vec{p}\cdot\vec{\nabla}E_{x}$                       (3.1f)
+โดยที่ $\dfrac{\partial \vec{E}}{\partial l}$ เป็นอนุพันธ์ของเวกเตอร์ $\vec{E}$ เทียบกับทิศทางของขั้วคู่ไฟฟ้า   $\vec{\nabla}E_{x}$ คือเกรเดียนท์ของฟังก์ชัน $E_{x}$~\\
+3.2 ตัวนำไฟฟ้าและไดอิเล็กทริกในสนามไฟฟ้า
+
+~\\ $\bullet$ สนามไฟฟ้าใกล้ผิวของตัวนำในสุญญากาศ:
+$E_{n} = \dfrac{\sigma}{\epsilon_{0}}$           (3.2a)
+
+~\\ $\bullet$ ฟลักซ์ของเวคเตอร์การโพลาร์ไรซ์ $\vec{P}$ ผ่านผิวปิด :
+$\displaystyle \oint \vec{P}\cdot d\vec{A} = - q^\prime$          (3.2b)
+โดยที่ $q^\prime$  คือผลบวกเชิงพีชคณิตของประจุไม่อิสระที่ถูกล้อมโดยผิวนี้
+
+~\\ $\bullet$ เวคเตอร์ $\vec{D}$ และกฎของเกาส์สำหรับมัน :
+$\vec{D} = \epsilon_{0}\vec{E} + \vec{P}              \displaystyle \oint\vec{D}\cdot \vec{dA} = q$          (3.2c)
+โดย q คือผลบวกเชิงพีชคณิตของประจุอิสระภายในผิวปิดนี้
+
+~\\ $\bullet$ ความสัมพันธ์ระหว่างไดอิเล็กทริกสองชนิดที่ผิวขอบ:
+$P_{2n} - P{1n} = -\sigma^\prime   ,      D_{2n} - D_{1n} = \sigma   ,      E_{2\tau} = E_{1\tau}$            (3.2d)
+โดย $\sigma$  และ $\sigma^\prime$  เป็นความหนาแน่นประจุเชิงพื้นที่ของประจุอิสระ และไม่อิสระตามลำดับ และเวคเตอร์หน่วย $\hat{n}$ ชี้ตั้งฉากจากตัวกลาง 1 ไปตัวกลาง 2
+
+~\\ $\bullet$ ในไดอิเล็กทริกไอโซทรอปิก:
+$\vec{P} = \chi\epsilon_{0}\vec{E} ,   \vec{D} = \epsilon\epsilon_{0}\vec{E} ,   \epsilon = 1+\chi$            (3.2e)
+
+~\\ $\bullet$ ในกรณีไดอิเล็กทริกไอโซทรอปิกที่สม่ำเสมอถูกเติมเต็มเข้าในช่องว่างระหว่างผิวสมศักย์ :
+$\vec{E} = \dfrac{\vec{E}_{0}}{\epsilon_{0}}$~\\
+
+3.3 ความจุไฟฟ้า และพลังงานของสนามไฟฟ้า
+
+~\\ $\bullet$ ความจุของตัวเก็บประจุแบบแผ่นขนาน :
+$C = \epsilon\epsilon_{0}\dfrac{A}{d}$                         (3.3a)
+
+~\\ $\bullet$ พลังงานที่กระทำระหว่างกันของประจุจุด :
+$W = \dfrac{1}{2}\displaystyle \sum q_{i}\varphi_{i}$                  (3.3b)
+
+~\\ $\bullet$ พลังงานไฟฟ้าทั้งหมดของระบบซึ่งประจุกระจายอย่างต่อเนื่อง :
+$W = \dfrac{1}{2}\displaystyle \int \varphi\rho dV$                     (3.3c)
+
+~\\ $\bullet$ พลังงานไฟฟ้ารวมของวัตถุมีประจุสองตัว 1 และ 2 :
+$W = W_{1}+W_{2}+W_{12}$                            (3.3d)
+เมื่อ $W_{1}$ และ $W_{2}$ คือพลังงานในตัวเองของวัตถุ และ $W_{12}$ คือพลังงานระหว่างกันของวัตถุ 2 ก้อนนั้น
+
+~\\ $\bullet$ พลังงานของตัวเก็บประจุที่มีประจุอยู่ :
+$W = \dfrac{qV}{2} = \dfrac{q^{2}}{2C} = \dfrac{CV^{2}}{2}$                    (3.3e)
+
+~\\ $\bullet$ ความหนาแน่นเชิงปริมาตรของพลังงานสนามไฟฟ้า :
+$\omega = \dfrac{\vec{E}\cdot\vec{D}}{2} = \dfrac{\epsilon\epsilon_{0}E^{2}}{2}$                    (3.3f)~\\
+
+3.4 กระแสไฟฟ้า
+
+~\\ $\bullet$ กฎของโอห์มสำหรับส่วนของวงจรแบบไม่เอกพันธ์ :
+$I = \dfrac{V_{12}}{R} = \dfrac{\varphi_{1} - \varphi_{2} +\varepsilon_{12}}{R}$                (3.4a)
+โดยที่ $V_{12}$ คือความต่างศักย์ตกคร่อมส่วนย่อยนั้น
+
+~\\ $\bullet$ รูปแบบดิฟเฟอเรนเชียลของกฎของโอห์ม :
+$\vec{j} = \sigma(\vec{E}+\vec{E}^{*})$                               (3.4b)
+โดยที่ $\vec{E}^{*}$ คือความเข้มสนามจากแรงภายนอก
+
+~\\ $\bullet$ กฎของ Kirchhoff (สำหรับวงจรไฟฟ้า) :
+$\displaystyle \sum I_{k} = 0,       \displaystyle \sum I_{k}R_{k} = \displaystyle \sum \varepsilon_{k}$                               (3.4c)
+
+~\\ $\bullet$ กำลัง $P$ ของกระแส และกำลังไฟฟ้าที่เปลี่ยนเป็นความร้อน $Q$ :
+$P = VI = (\varphi_{1}-\varphi_{2}+\varepsilon_{12})I  ,          Q = RI^{2}$                       (3.4d)
+
+~\\ $\bullet$ กำลังไฟฟ้าจำเพาะ(specific power) $P_{sp}$ และ $Q_{sp}$ ของกระแสไฟฟ้า :
+$P_{sp} = \vec{j}\cdot(\vec{E}+\vec{E}^{*})  ,          Q_{sp} = \rho j^{2}$                   (3.4e)
+
+~\\ $\bullet$ ความหนาแน่นกระแสในโลหะ :
+$\vec{j} = en\vec{u}$                      (3.4f)
+โดยที่ $\vec{u}$ คือความเร็วเฉลี่ยของอนุภาคที่นำพากระแส
+
+3.5 สรุปความรู้เรื่องสนามแม่เหล็กที่ไม่แปรตามเวลา และแม่เหล็ก
+
+~\\ $\bullet$ สนามแม่เหล็กจากประจุจุดที่เคลื่อนที่ด้วยความเร็วไม่สัมพัทธภาพ  $\vec{v}$  :
+$\vec{B} = \dfrac{\mu_{0}}{4\pi}\dfrac{q\vec{v}\times\vec{r}}{r^{3}}                          (3.5a)$
+
+~\\ $\bullet$ กฎของบิโอต์-ซาวาร์ต์ :
+$\vec{dB} = \dfrac{\mu_{0}}{4\pi}\dfrac{\vec{j}\times\vec{r}}{r^{3}}dV  ,         \vec{dB} = \dfrac{\mu_{0}}{4\pi}\dfrac{I\vec{dl}\times\vec{r}}{r^{3}}                          (3.5b)$
+
+~\\ $\bullet$ การหมุนวนของ $\vec{B}$ และกฎของเกาส์สำหรับสนามแม่เหล็ก :
+$\displaystyle \oint \vec{B}\cdot\vec{dr} = \mu_{0}I ,            \displaystyle \oint \vec{B}\cdot\vec{dA} = 0$                               (3.5c)
+
+~\\ $\bullet$ แรงลอเรนตซ์ :
+$\vec{F} = q\vec{E} + q\vec{v}\times\vec{B}$                                       (3.5d)
+
+~\\ $\bullet$ แรงแอมแปร์ :
+$\vec{dF} = \vec{j}\times\vec{B} dV ,                 \vec{dF} = I\vec{dl}\times\vec{B}$                       (3.5e)
+
+~\\ $\bullet$ แรงและโมเมนต์ของแรงที่กระทำต่อขั้วคู่แม่เหล็ก $\vec{p}_{m} = IA\hat{n} :
+\vec{F}= p_{m}\dfrac{\partial \vec{B}}{\partial n} ,        \vec{T} = \vec{p}_{m}\times\vec{B}$               (3.5f)
+โดย $\dfrac{\partial \vec{B}}{\partial n}$ คืออนุพันธ์ของ $\vec{B}$ เทียบกับทิศทางของขั้วคู่แม่เหล็ก
+
+~\\ $\bullet$ การหมุนวนของเวคเตอร์การทำให้เป็นแม่เหล็ก(Magnetization vector)$\vec{J} :
+\displaystyle \oint \vec{J}\cdot\vec{dr} = I^\prime                                    (3.5g)$
+โดย  $I^\prime$ คือกระแสรวมระดับจุลภาค
+
+~\\ $\bullet$ เวคเตอร์ $\vec{H}$ และการหมุนวนของมัน :
+$\vec{H} = \dfrac{\vec{B}}{\mu_{0}} - \vec{J} ,          \displaystyle \oint \vec{H}\cdot\vec{dr} = I                                  (3.5h)$
+ดดยที่ I คือผลรวมเชิงพีชคณิตของกระแสระดับมหภาค
+
+~\\ $\bullet$ ความสัมพันธ์ที่ขอบนะหว่างแม่เหล็ก 2 ตัว :
+$B_{1n} = B_{2n} ,                H_{1\tau} = H_{2\tau}                                             (3.5i)$
+
+~\\ $\bullet$ กรณีของแม่เหล็กที่มี $\vec{J} = \chi_{m}\vec{H}$ :
+$\vec{B} = \mu\mu_{0}\vec{H} ,          \mu = 1+\chi_{m}                                             (3.5j)$~\\
+
+3.6 การเหนี่ยวนำแม่เหล็กไฟฟ้า และสมการของแมกซ์เวลล์
+
+~\\ $\bullet$ กฎการเหนี่ยวนำแม่เหล็ฏไฟฟ้าของฟาราเดย์ :
+$\Phi_{m} = N\Phi_{1m}                                                  (3.6b)$
+โดย $N$ คือจำนวนขด  $\Phi_{1m}$  คือฟลักซ์แม่เหล็กที่ผ่านแต่ละขด 
+
+~\\ $\bullet$ ค่าความเหนี่ยวนำของโซลีนอยด์ :
+$L = \mu\mu_{0}N^{2}\dfrac{A}{l}                                   (3.6c)$
+
+~\\ $\bullet$ พลังงานภายในตัวเหนี่ยวนำ และพลังงานระหว่างกันของตัวเหนี่ยวนำ 2 ตัว :
+$W = \dfrac{LI^{2}}{2} ,                 W_{12} = L_{12}I_{1}I_{2}                                (3.6d)$
+
+~\\ $\bullet$ ความหนาแน่นเชิงปริมาตรของพลังงานสนามแม่เหล็ก :
+$\omega_{m} = \dfrac{B^{2}}{2\mu\mu_{0}} = \dfrac{\vec{B}\cdot\vec{H}}{2}                     (3.6e)$
+
+~\\ $\bullet$ ความหนาแน่นของกระแสกระจัด  (Displacement current density) :
+$\vec{j}_{dis} = \dfrac{\partial \vec{D}}{\partial t}                                                      (3.6f)$
+
+~\\ $\bullet$ สมการของแมกซ์เวลล์ในรูปแบบดิฟเฟอเรนเชียล :
+$\vec{\nabla}\times\vec{E} = -\dfrac{\partial \vec{B}}{\partial t}
+\vec{\nabla}\cdot\vec{B} = 0
+\vec{\nabla}\times\vec{H} = \vec{j} + \dfrac{\partial \vec{D}}{\partial t}
+\vec{\nabla}\cdot\vec{E} = \rho                                                                                   (3.6g)$
+โดยที่ $\vec{\nabla}\times$  คือเคิร์ล   และ $\vec{\nabla}\cdot$ คือไดเวอร์เจนซ์
+
+~\\ $\bullet$ สูตรการแปลงสนามจากกรอบอ้างอิง $\Sigma$  ไปเป็นกรอบอ้างอิง $\Sigma^\prime$ ซึ่งเคลื่อนที่ด้วยความเร็ว $\vec{v}_{0}$ เมื่อเทียบกับอับแรก :
+ในกรณีที่ $v_{0} \ll c$
+$\vec{E}^\prime = \vec{E} + \vec{v}_{0}\times\vec{B} ,              \vec{B}^\prime = \vec{B} - \dfrac{\vec{v}_{0}\times\vec{E}}{c^{2}}                                             (3.6h)$
+ในกรณีทั่วไป
+$\vec{E}^\prime_{\parallel } = \vec{E}_{\parallel} ,             \vec{B}^\prime_{\parallel} = \vec{B}_{\parallel}
+\vec{E}^\prime_{\perp} = \dfrac{\vec{E}_{\perp} + \vec{v}_{0}\times\vec{B}}{\sqrt{1-(\dfrac{v}{c})^{2}}} ,                      \vec{B}^\prime_{\perp} = \dfrac{\vec{B}_{\perp}-\dfrac{\vec{v}_{0}\times\vec{E}}{c^{2}}}{\sqrt{1-(\dfrac{v}{c})^{2}}}                                                                     (3.6i)$
+โดยที่เครื่องหมาย  $\parallel$  และ  $\perp$  แสดงถึงองค์ประกอบของสนามที่ขนานและตั้งฉากกับทิศทางการเคลื่อนที่ของกรอบอ้างอิง คือเวคเตอร์ $\vec{v}_{0}$ ตามลำดับ
+
+3.7 การเคลื่อนที่ของอนุภาคมีประจุในสนามแม่เหล็กและสนามไฟฟ้า
+~\\ $\bullet$แรงโลเร็นตซ์ :
+$\vec{F} = q\vec{E}+q\vec{v}\times\vec{B}$                              (3.7a)
+
+~\\ $\bullet$การเคลื่อนที่เชิงสัมพัทธภาพของอนุภาค :
+$\dfrac{d}{dt}\dfrac{m_{0}\vec{v}}{\sqrt{1-(\dfrac{v}{c})^{2}}} = \vec{F}$                            (3.7b)
+
+~\\ $\bullet$คาบของการวนครบรอบของประจุในสนามแม่เหล็กสม่ำเสมอ :
+$T = \dfrac{2\pi m}{qB}                                                 (3.7c)$
+โดยที่ $m$ คือมวลสัมพัทธภาพของอนุภาค, $m = \dfrac{m_{0}}{\sqrt{1 - (\dfrac{v}{c})^{2}}}$
+
+~\\ $\bullet$เงื่อนไขเบตาตรอน คือเงื่อนไขสำหรับอิเล็กตรอนที่เคลื่อนที่เป็นวงกลมภายในเครื่องเร่งเบตาตรอน :
+$B_{0} = \dfrac{1}{2}\left\langle B \right\rangle                                (3.7d)$
+โดยที่ $B_{0}$ คือสนามแม่เหล็กที่จุดของวงโคจร และ $\left\langle B \right\rangle$  คือค่าเฉลี่ยของสนามแม่เหล็กภายในวงโคจร
+
+\end{document}

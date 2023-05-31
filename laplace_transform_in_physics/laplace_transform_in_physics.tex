@@ -1,0 +1,191 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{caption}
+	
+\title{Laplace Transform ในฟิสิกส์ฉบับพื้นฐาน}
+\author{อิธิพัฒน์ ธนบดีกาญจน์}
+
+\begin{document}
+
+\maketitle
+
+\section{บทนำ}
+Laplace Transform ($\mathscr{L}$) เป็นการแปลงโดเมนเวลา ($t$ domain) เป็นโดเมนความถี่ ($s$ domain)
+ซึ่งมีความซับซ้อนและมีความเชื่อมโยงกับ Fourier Transform แต่ผู้เขียนต้องการเน้นการใช้ Laplace Transform แก้ปัญหาฟิสิกส์จึงคัดเลือกเฉพาะส่วนที่สำคัญมานำเสนอในการแก้สมการเชิงอนุพันธ์ซึ่งสามารถทำได้โดยแปลงสมการเชิงอนุพันธ์แล้วจัดรูปสมการให้สามารถแปลงผกผันออกมาเป็นผลเฉลยของสมการเชิงอนุพันธ์นั้นได้
+
+\section{อธิบายบทนิยาม}
+สมมติสมการการเคลื่อนที่ ที่เราต้องการหา $v(t)$
+\begin{equation*}
+	m\dot{v}+\beta v=0
+\end{equation*}
+ในการแก้สมการเชิงอนุพันธ์โดยทั่วไปจะแก้ด้วยการหาปริพันธ์
+\begin{equation*}
+	\int\dot{v}\,\dl t+\beta\int v\,\dl t=\int 0\,\dl t
+\end{equation*}
+แต่การทำเช่นนี้จะทำให้เกิดปัญหา คือ จะเกิดพจน์ $\int v\,\dl t$ ขึ้นซึ่งสังเกตได้ว่าเราจะไม่มีทางอินทิเกรตให้เหลือพจน์ $v(t)$ อย่างเดียวได้ จึงต้องใช้วิธีอินทิเกรตแบบสร้างสรรค์ คือ อินทิเกรตให้ทุกพจน์อยู่ในรูปของ $\int \square\,\dl t$ แล้วค่อยแก้สมการต่อ ระลึกว่ามีการอินทิเกรตรูปแบบหนึ่งที่สามารถทำสิ่งที่เราต้องการได้ คือ Integration by parts แต่เราต้องการฟังก์ชันที่มีอนุพันธ์เป็นตัวเดิมมาช่วยในการทำ Integration by parts เราจึงสมมติ $e^{-st}$ ขึ้นมาช่วยในการอินทิเกรตโดยมีเครื่องหมายลบเนื่องจากสูตรของ Integration by parts นั้น มีลบอยู่แต่เรานิยมให้เป็นบวกมากกว่าจึงใส่ลบหน้า $s$ ไปด้วย ดังนั้นจะได้
+\begin{equation*}
+	\int \dot{v}e^{-st}\,\dl t=ve^{-st}+s\int ve^{-st}\,\dl t
+\end{equation*}
+ต่อมาเราต้องการให้พจน์ $ve^{-st}$ เป็นค่าคงที่ค่าหนึ่งเพราะจะทำให้เราคำนวณได้ง่ายขึ้นมาก เราจึงเปลี่ยนเป็นปริพันธ์จำกัดเขตโดยมีขอบเขตบนเป็น $\infty$ เพราะจะทำให้พจน์นั้นเป็น $0$ และให้ขอบเขตล่างเป็น $0$ เพราะจะทำให้พจน์นั้นเป็นค่าคงที่
+\begin{equation*}
+	\int_0^\infty \dot{v}e^{-st}\,\dl t=\left[ve^{-st}\right]_0^\infty+s\int_0^\infty ve^{-st}\,\dl t=-v(0)+s\int_0^\infty ve^{-st}\,\dl t
+\end{equation*}
+โดย $v(0)$ คือ เงื่อนไขตั้งต้น (Initial condition) ที่โจทย์จะกำหนดมาหรือให้เราทำความเข้าใจสถานการณ์เอง (เช่น ปล่อยวัตถุให้ตกลงสู่พื้นจากหยุดนิ่งจะได้ $v(0)=0$) จากนั้นนิยามฟังก์ชันใหม่ขึ้นมาเพื่อความสะดวกในการเขียนการอินทิเกรตแบบนี้ว่า Laplace Transform
+\begin{equation*}
+	\int_0^\infty \dot{v}e^{-st}\,\dl t\equiv \mathscr{L}\{\dot{v}\}=-v(0)+s\int_0^\infty ve^{-st}\,\dl t
+\end{equation*}
+และนิยามอีกฟังก์ชันตามความนิยม คือ
+\begin{equation*}
+	\int_0^\infty ve^{-st}\,\dl t\equiv \mathscr{L}\{v\}\equiv V(s)
+\end{equation*}
+ที่นิยามแบบนี้เพราะในที่สุด $V(s)$ จะเป็นฟังก์ชันที่นำไปสู่ผลเฉลยของสมการโดยการทำ Inverse Laplace Transform ($\mathscr{L}^{-1}$) และเราอาจจะเขียน $V(s)$ ย่อ ๆ เป็น $V$ ทำให้สุดท้ายแล้วจะได้
+\begin{equation*}
+	\mathscr{L}\{\dot{v}\}=-v(0)+sV
+\end{equation*}
+และเขียนนิยามทั่วไปของ Laplace Transform ได้เป็น
+\begin{equation}
+	\boxed{
+		\mathscr{L}\{f(t)\}=\int_0^\infty f(t)e^{-st}\,\dl t
+	}
+\end{equation}
+เราจะเห็นว่าการที่เราจะทำ Laplace Transform ได้นั้น เราต้องอินทิเกรตทุกพจน์ของสมการ จึงมีผู้ทำตาราง Laplace Transform ไว้เรียบร้อยแล้วให้เรานำมาใช้งานได้โดยสะดวก (พิจารณาเฉพาะ $t\geqslant0$)
+\begin{center}
+	\bgroup
+	\def\arraystretch{2}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		ลำดับที่ & $f(t)$     & $\mathscr{L}\{f(t)\}$ \\
+		\hline
+		1     & 1          & $\dfrac{1}{s}$        \\
+		\hline
+		2     & $t$        & $\dfrac{1}{s^2}$      \\
+		\hline
+		3     & $t^n$      & $\dfrac{n!}{s^{n+1}}$ \\
+		\hline
+		4     & $e^{-at}$  & $\dfrac{1}{s+a}$      \\
+		\hline
+		5     & $te^{-at}$ & $\dfrac{1}{(s+a)^2}$  \\
+		\hline
+		6     & $\sin at$  & $\dfrac{a}{s^2+a^2}$  \\
+		\hline
+		7     & $\cos at$  & $\dfrac{s}{s^2+a^2}$  \\
+		\hline
+	\end{tabular}
+	\egroup
+	\captionof{table}{Laplace Transform บางส่วน ($a$ เป็นค่าคงที่\textenglish{)}}
+\end{center}
+\begin{center}
+	\bgroup
+	\def\arraystretch{2}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		ลำดับที่ & $g(t)$               & $\mathscr{L}\{g(t)\}$                                       \\
+		\hline
+		1     & $\diff*{f(t)}{t}$    & $sF(s)-f(0)$                                                \\
+		\hline
+		2     & $\diff*[2]{f(t)}{t}$ & $s^2F(s)-sf(0)-f^{(1)}(0)$                                  \\
+		\hline
+		3     & $\diff*[n]{f(t)}{t}$ & $s^nF(s)-s^{n-1}f(0)-s^{n-2}f^{(1)}(0)-\cdots-f^{(n-1)}(0)$ \\
+		\hline
+	\end{tabular}
+	\egroup
+	\captionof{table}{สมบัติของ Laplace Transform บางส่วน}
+\end{center}
+จากตารางทำให้เราทราบว่าถ้าเราพบสมการเชิงอนุพันธ์อันดับสูงมาก ๆ การใช้ Laplace Transform จะช่วยให้เราแก้ได้ง่ายขึ้นเป็นอย่างมาก
+\section{ตัวอย่างโจทย์ปัญหา}
+\indent ปล่อยวัตถุมวล $m$ จากหยุดนิ่งที่มีความสูง $h$ วัดจากพื้นในสนามโน้มถ่วง $g$ และมีแรงต้านอากาศ $\beta v$\\
+จงหา (ด้วยวิธี Laplace Transform)
+\begin{enumerate}
+	\item $v(t)$
+	\item $x(t)$
+\end{enumerate}
+จาก
+\begin{equation}
+	\sum F=ma
+\end{equation}
+จะได้
+\begin{equation}
+	mg-\beta v=ma
+\end{equation}\label{eq:meq}
+ทำ Laplace Transform
+\begin{align*}
+	\mathscr{L}\{mg-\beta v                   & =ma\}                    \\
+	\mathscr{L}\{mg-\beta v                   & =m\dot{v}\}              \\
+	mg\mathscr{L}\{1\}-\beta \mathscr{L}\{v\} & =m\mathscr{L}\{\dot{v}\} \\
+	\dfrac{mg}{s}-\beta V                     & =m(sV-v(0))
+\end{align*}
+เนื่องจากปล่อยวัตถุจากหยุดนิ่ง ดังนั้น $v(0)=0$
+\begin{align*}
+	V & =\dfrac{mg}{s(ms+\beta)}         \\
+	V & =\dfrac{g}{s(s+\frac{\beta}{m})}
+\end{align*}
+แยกเศษส่วนย่อย
+\begin{align*}
+	V                   & =\dfrac{mg}{\beta s}-\dfrac{mg}{\beta(s+\frac{\beta}{m})} \\
+	\mathscr{L}\{v(t)\} & =\dfrac{mg}{\beta s}-\dfrac{mg}{\beta(s+\frac{\beta}{m})}
+\end{align*}
+ทำ Inverse Laplace Transform
+\begin{align*}
+	v(t) & =\mathscr{L}^{-1}\left\{\dfrac{mg}{\beta s}-\dfrac{mg}{\beta(s+\frac{\beta}{m})}\right\}                                                 \\
+	v(t) & =\dfrac{mg}{\beta}\left(\mathscr{L}^{-1}\left\{\dfrac{1}{s}\right\}-\mathscr{L}^{-1}\left\{\dfrac{1}{(s+\frac{\beta}{m})}\right\}\right)
+\end{align*}
+จากการเปิดตารางจะได้ผลเฉลยคือ
+\begin{equation*}
+	v(t)=\dfrac{mg}{\beta}\left(1-e^{-\frac{\beta}{m}t}\right)\;\blacksquare
+\end{equation*}
+จาก (\ref{eq:meq}) จะได้
+\begin{equation*}
+	mg-\beta\dot{x}=m\ddot{x}\\
+\end{equation*}
+ทำ Laplace Transform
+\begin{align*}
+	\mathscr{L}\{mg-\beta\dot{x}                    & =m\ddot{x}\}              \\
+	mg\mathscr{L}\{1\}-\beta \mathscr{L}\{\dot{x}\} & =m\mathscr{L}\{\ddot{x}\} \\
+	\dfrac{mg}{s}-\beta(sX-x(0))                    & =m(s^2-sx(0)-\dot{x}(0))
+\end{align*}
+เนื่องจากปล่อยวัตถุจากความสูง $h$ และหยุดนิ่ง ดังนั้น $x(0)=-h, \dot{x}(0)=0$
+\begin{align*}
+	\dfrac{mg}{s}-\beta sX-\beta h & =ms^2X+msh                                 \\
+	X                              & =\dfrac{mg-s\beta h-mhs^2}{ms^3+\beta s^2}
+\end{align*}
+แยกเศษส่วนย่อย
+\begin{align*}
+	X                   & =\dfrac{mg}{s^2(ms+\beta)}-\dfrac{sh(ms+\beta)}{s^2(ms+\beta)}                                      \\
+	X                   & =\dfrac{g}{s^2(s+\frac{\beta}{s})}-\dfrac{h}{s}                                                     \\
+	X                   & =\dfrac{mg}{\beta s^2}-\dfrac{m^2g}{\beta^2s}+\dfrac{m^2g}{\beta^2(s+\frac{\beta}{m})}-\dfrac{h}{s} \\
+	\mathscr{L}\{x(t)\} & =\dfrac{mg}{\beta s^2}-\dfrac{m^2g}{\beta^2s}+\dfrac{m^2g}{\beta^2(s+\frac{\beta}{m})}-\dfrac{h}{s}
+\end{align*}
+ทำ Inverse Laplace Transform
+\begin{align*}
+	x(t) & =\mathscr{L}^{-1}\left\{\dfrac{mg}{\beta s^2}-\dfrac{m^2g}{\beta^2s}+\dfrac{m^2g}{\beta^2(s+\frac{\beta}{m})}-\dfrac{h}{s}\right\}                                                                                                                            \\	x(t)&=\mathscr{L}^{-1}\left\{\dfrac{mg}{\beta}\left(\dfrac{1}{s^2}+\dfrac{m}{\beta}\left(\dfrac{1}{s+\frac{\beta}{m}}-\dfrac{1}{s}\right)\right)-\dfrac{h}{s}\right\}\\
+	x(t) & =\dfrac{mg}{\beta}\left(\mathscr{L}^{-1}\left\{\dfrac{1}{s^2}\right\}+\dfrac{m}{\beta}\left(\mathscr{L}^{-1}\left\{\dfrac{1}{s+\frac{\beta}{m}}\right\}-\mathscr{L}^{-1}\left\{\dfrac{1}{s}\right\}\right)\right)-\mathscr{L}^{-1}\left\{\dfrac{h}{s}\right\}
+\end{align*}
+จากการเปิดตารางจะได้ผลเฉลยคือ
+\begin{equation*}
+	x(t)=\dfrac{mg}{\beta}\left(t+\dfrac{m}{\beta}\left(e^{-\frac{\beta}{m}t}-1\right)\right)-h\;\blacksquare
+\end{equation*}
+\end{document}

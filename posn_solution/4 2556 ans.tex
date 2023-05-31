@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{4} 2556}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(t = \dfrac{v_{0}+\sqrt{v_{0}^2 +2 a\ell}}{a}\)
+	\item \(\sqrt{\dfrac{2Gm_{2}^{2}}{(m_{1}+m_{2})R}} + \sqrt{\dfrac{2Gm_{1}^{2}}{(m_{2}+m_{1})R}}\)
+	\item \(\dfrac{R \sin \alpha \cos ^2 \alpha}{2}\)
+	\item \(e^{2n}h_{0}\)
+	\item ประจุ \(=\dfrac{CV}{2^n}\), ความต่างศักย์ \(=\dfrac{V}{2^{n+1}}\)
+	\item \(-\dfrac{7}{3} \dfrac{Q^{2}}{4\pi \epsilon _{0}d}\)
+	\item \(4\) หน่วย, ภาพเสมือน
+	\item ตาชั่งจะชี้น้ำหนักมากขึ้น \(\rho Vg\), ความดันที่ก้นถ้วยสูงขึ้น \(\dfrac{\rho Vg}{A}\)
+	\item \(T = \dfrac{k_{1}\ell_{2}T_{0}+k_{2}\ell_{1}T_{1}}{k_{1}\ell_{2}+k_{2}\ell_{1}}\)
+	\item\(v_{\text{min}}=\sqrt{\dfrac{B}{A}}\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

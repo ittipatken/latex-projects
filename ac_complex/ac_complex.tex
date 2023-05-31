@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{physics}
+\usepackage{circuitikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\title{การแก้ปัญหาวงจรไฟฟ้ากระแสสลับด้วยจำนวนเชิงซ้อน}
+\author{อิธิพัฒน์ ธนบดีกาญจน์}
+
+\begin{document}
+\maketitle
+\section{บทนำ}
+การใช้จำนวนเชิงซ้อนดีกว่าการใช้ Phasor ในระบบมัธยมปลายทั่วไปอย่างไร ?
+\begin{itemize}
+	\item ไม่ต้องวาด Phasor Diagram
+	\item เป็นการแก้ปัญหาด้วยพีชคณิต ไม่ต้องใช้เรขาคณิตซึ่งโดยส่วนใหญ่แล้วพีชคณิตจะง่ายกว่า
+\end{itemize}
+
+วิธีการคิด จะใช้ Euler's formula\footnote{ในระดับมัธยมปลายจะนิยมเขียน $\mathrm{cis}\,\theta$} ช่วยในการแปลงตรีโกณมิติเป็นจำนวนเชิงซ้อน
+	\begin{equation}
+		e^{j\theta}=\cos\theta+j\sin\theta
+	\end{equation}
+เราจะใช้ $j$ เพื่อสงวน $i$ ไว้ใช้เป็นตัวแปรของกระแสไฟฟ้า
+	\begin{equation}
+		j^2=-1
+	\end{equation}
+แต่เนื่องด้วย วิธีการคิดที่เป็นจำนวนเชิงซ้อนแต่คำตอบที่ต้องการเป็นจำนวนจริง เราจึงต้องพิจารณาแหล่งจ่ายไฟฟ้ากระแสสลับว่า เป็นฟังก์ชันของ $\sin$ หรือ $\cos$
+และนำเฉพาะส่วนจริง (Real Part) หรือส่วนจินตภาพ (Imaginary Part) เป็นคำตอบ
+\section{การใช้ปริมาณเชิงซ้อนในไฟฟ้ากระแสสลับ}
+ \begin{enumerate}
+	\item แหล่งจ่ายไฟฟ้ากระแสสลับ
+	\begin{enumerate}
+		\item $V_{\mathrm{max}}\sin\omega t\rightarrow V_{\mathrm{max}}e^{j\omega t}$ โดย $V_{\mathrm{max}}\sin\omega t=\Im\left[V_{\mathrm{max}}e^{j\omega t}\right]$
+		\item $V_{\mathrm{max}}\cos\omega t\rightarrow V_{\mathrm{max}}e^{j\omega t}$ โดย $V_{\mathrm{max}}\cos\omega t=\Re\left[V_{\mathrm{max}}e^{j\omega t}\right]$
+	\end{enumerate}
+	\item ตัวต้านทาน
+	\begin{enumerate}
+		\item $R\rightarrow R$
+	\end{enumerate}
+\newpage
+	\item ตัวเก็บประจุ
+	\begin{enumerate}
+		\item $C\rightarrow \tilde{X}_{C}=\dfrac{1}{j\omega C}$
+	\end{enumerate}
+		\item ตัวเหนี่ยวนำ
+	\begin{enumerate}
+		\item $L\rightarrow \tilde{X}_{L}=j\omega L$
+	\end{enumerate}
+\end{enumerate}
+\section{ตัวอย่างการแก้โจทย์ปัญหา}
+	\subsection{วงจร R L C ต่ออนุกรม}
+	\begin{center}
+		\begin{circuitikz}
+			\draw
+			(0,0) to[sinusoidal voltage source] (6,0) -- (6,2)
+			to[C=$C$] (4,2)
+			to[L=$L$] (2,2)
+			to[R=$R$] (0,2) -- (0,0); 
+		\end{circuitikz}
+	\end{center}
+ให้ $v(t)=V_{\mathrm{max}}\sin\omega t$ คร่อมแหล่งจ่ายไฟฟ้ากระแสสลับ จงหา $i(t)$\\
+\textbf{วิธีทำ} ให้ 
+\begin{align*}
+\tilde{v}(t)&=V_{\mathrm{max}}e^{j\omega t}\\
+v(t)&=\Im\left[V_{\mathrm{max}}e^{j\omega t}\right]
+\end{align*}
+กำหนดให้ $Z$ คือ ความขัด (Impedance) ของ $R,\,X_{L}$ และ $X_{C}$\\
+\begin{align*}
+\tilde{Z}&=R+\tilde{X}_{L}+\tilde{X}_{C}\\
+\tilde{Z}&=R+j\omega L+\frac{1}{j\omega C}\\
+\tilde{Z}&=R+j\omega L-\frac{j}{\omega C}\\
+\tilde{Z}&=R+\left(\omega L-\frac{1}{\omega C}\right)j
+\end{align*}
+แปลงให้อยู่ใน รูปเชิงขั้ว
+\begin{equation*}
+\tilde{Z}=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}e^{j\arctan(\frac{\omega L-1/\omega C}{R})}
+\end{equation*}
+จาก $\tilde{v}=\tilde{i}\tilde{Z}$ (Ohm's law)\\
+\begin{align*}
+\tilde{i}(t)&=\dfrac{\tilde{v}(t)}{\tilde{Z}}\\
+\tilde{i}(t)&=\dfrac{V_{\mathrm{max}}e^{j\omega t}}{\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}e^{j\arctan(\frac{\omega L-1/\omega C}{R})}}\\
+\tilde{i}(t)&=\dfrac{V_{\mathrm{max}}}{\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}}e^{j\left(\omega t-\arctan(\frac{\omega L-1/\omega C}{R})\right)}
+\end{align*}
+take imaginary part
+$$\therefore i(t)=\dfrac{V_{\mathrm{max}}}{\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}}\sin(\omega t-\arctan(\frac{\omega L-1/\omega C}{R}))\;\blacksquare$$
+	\subsection{วงจร R L C ต่อขนาน}
+	\begin{center}
+		\begin{circuitikz}
+			\draw
+			(0,0) to[sinusoidal voltage source] (0,2.5)
+			to[short] (2,2.5)
+			to[R=$R$] (2,0)
+			to[short] (0,0);
+			\draw (2,2.5)
+			to[short] (4,2.5)
+			to[L=$L$] (4,0)
+			to[short] (2,0);
+			\draw (4,2.5)
+			to[short] (6,2.5)
+			to[C=$C$] (6,0)
+			to[short] (4,0); 
+		\end{circuitikz}
+	\end{center}
+ให้ $v(t)=V_{\mathrm{max}}\cos\omega t$ คร่อมแหล่งจ่ายไฟฟ้ากระแสสลับ จงหา $i(t)$\\
+\textbf{วิธีทำ} ให้
+\begin{align*}
+\tilde{v}(t)&=V_{\mathrm{max}}e^{j\omega t}\\
+v(t)&=\Re\left[V_{\mathrm{max}}e^{j\omega t}\right]
+\end{align*}
+กำหนดให้ $Z$ คือ ความขัด (Impedance) ของ $R,\,X_{L}$ และ $X_{C}$
+\begin{align*}
+\dfrac{1}{\tilde{Z}}&=\dfrac{1}{R}+\dfrac{1}{\tilde{X}_C}+\dfrac{1}{\tilde{X}_L}\\
+\dfrac{1}{\tilde{Z}}&=\dfrac{1}{R}+j\omega C+\dfrac{1}{j\omega L}\\
+\dfrac{1}{\tilde{Z}}&=\dfrac{1}{R}+\left(\omega C-\dfrac{1}{\omega L}\right)j
+\end{align*}
+แปลงให้อยู่ใน รูปเชิงขั้ว
+\begin{equation*}
+\dfrac{1}{\tilde{Z}}=\sqrt{\dfrac{1}{R^2}+\left(\omega C-\dfrac{1}{\omega L}\right)^2}e^{j\arctan(\frac{\omega C-1/\omega L}{1/R})}
+\end{equation*}
+\noindent จาก $\tilde{v}=\tilde{i}\tilde{Z}$ (Ohm's law)\\
+\begin{align*}
+\tilde{i}(t)&=\dfrac{\tilde{v}(t)}{\tilde{Z}}\\
+\tilde{i}(t)&=V_{\mathrm{max}}e^{j\omega t} \sqrt{\dfrac{1}{R^2}+\left(\omega C-\dfrac{1}{\omega L}\right)^2}e^{j\arctan(\frac{\omega C-1/\omega L}{1/R})}\\
+\tilde{i}(t)&=V_{\mathrm{max}}\sqrt{\dfrac{1}{R^2}+\left(\omega C-\dfrac{1}{\omega L}\right)^2}e^{j\arctan(\omega t+\frac{\omega C-1/\omega L}{1/R})}
+\end{align*}
+take real part
+$$\therefore i(t)=V_{\mathrm{max}}\sqrt{\dfrac{1}{R^2}+\left(\omega C-\dfrac{1}{\omega L}\right)^2}\cos(\omega t+\arctan(\frac{\omega C-1/\omega L}{1/R}))\;\blacksquare$$\\
+\begin{thebibliography}{9}
+	\bibitem{physicschula} 
+	จุฬาลงกรณ์มหาวิทยาลัย. คณะวิทยาศาสตร์. ภาควิชาฟิสิกส์. (2559). \underline{ฟิสิกส์ 2}. พิมพ์ครั้งที่ 14. กรุงเทพฯ: สำนักพิมพ์จุฬาลงกรณ์มหาวิทยาลัย.
+	\bibitem{physicsipst4}
+	\raggedright สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี กระทรวงศึกษาธิการ. (2554). \underline{หนังสือเรียน รายวิชาเพิ่มเติม ฟิสิกส์ เล่ม 4}. พิมพ์ครั้งที่ 1. กรุงเทพฯ: โรงพิมพ์ สกสค. ลาดพร้าว.
+	\bibitem{genphys2midterm}
+	Nossu G. N. (2562). \underline{GEN Phys 2 Midterm}.
+\end{thebibliography}
+
+\end{document}

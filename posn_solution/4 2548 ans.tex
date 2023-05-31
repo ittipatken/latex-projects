@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{4} 2548}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \SI{0.271}{kg}
+	\item \(T = T_L + \dfrac{R-R_L}{R_H - R_L} (T_H - T_L)\)
+	\item \(\dfrac{D_AV_A + D_BV_B + D_A(V_A + V_B)}{2(V_A + V_B)}\)
+	\item \(D_0/(1 + \gamma (T - T_0))\)
+	\item \SI{163.2}{cm}
+	\item \
+	\begin{enumerate}
+		\item ค่าโดยสารเพิ่มเป็น \(R/r\) เท่า หรือส่วนที่เพิ่มมีค่าเท่ากับ  \((R-r)/r\) เท่า
+		\item เวลาเพิ่มเป็น \(R/r\) เท่า หรือส่วนที่เพิ่มมีค่าเท่ากับ  \((R-r)/r\) เท่า
+	\end{enumerate}
+	\item \(r_2/r_1\)
+	\item \SI{6.5}{m/s}
+	\item \SI{1}{\ohm}
+	\item \SI{2}{A}
+	\item \
+	\begin{enumerate}
+		\item \(\alpha = \theta_2 +\theta_3\)
+		\item \(\delta = \pi/2 + \theta_1 - \theta_4 - \alpha\)
+		\item \(X = \sqrt{n^2 -\sin^2 \theta_1} \sin \alpha - \cos \alpha \sin \theta_1\) หรือ \(X = n \sin[\alpha - \arcsin (\sin \theta_1 / n)]\)
+	\end{enumerate}
+	\item \(1.1\times10^{29}\) ตัว
+	\item \
+	\begin{enumerate}
+		\item \SI{28}{N}
+		\item \SI{19.6}{N}
+	\end{enumerate}
+	\item \SI{2000}{m}
+	\item 240 ตัว
+	\item \(7/6\) เท่า
+	\item \
+	\begin{enumerate}
+		\item \SI{10}{mm}
+		\item \SI{16}{cm}
+	\end{enumerate}
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

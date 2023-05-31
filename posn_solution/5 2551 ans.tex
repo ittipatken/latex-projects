@@ -1,0 +1,54 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2551}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(\theta_{0}=\frac{1}{2}\arcsin(gD/u^2)\) และ \(90^{\circ}-\frac{1}{2}\arcsin(gD/u^2)\)
+	\item ผลบวก \(= 90^{\circ}\)
+	\item มุม \(= 30^{\circ}\)
+	\item อัตราเร็วของ \(A = 50 \%\) ของอัตราเร็วตั้งต้น
+	\item จุด A อยู่สูงจากพื้นระดับ \(= 2.5\) เท่าของรัศมีของราง OB
+	\item ความถ่วงจำเพาะของ \(M = 1+d/h\)
+	\item แนวแสงออกทำมุม \(= i_1+i_2-A\) องศากับแนวแสงเข้า
+	\item อัตราส่วน = \(\dfrac{\mathcal{E}_1R_2-\mathcal{E}_2R_1}{\mathcal{E}_1R_2+\mathcal{E}_2R_1}\)
+	\item พลังงานไฟฟ้าที่เก็บอยู่ในตัวเก็บประจุ \(C = \dfrac{1}{2}C\left [ \dfrac{R_2\mathcal{E}_1}{R_1+R_2} \right ]^2\)
+	\item ความเร็วมีขนาด \(= \dfrac{2}{5}\dfrac{I^2R}{P_aA+Mg}\)
+	\item ขนาดความเร็วของเรือเป็น \(\dfrac{t_2-t_1}{2T+t_2-t_1}\times 100\) เปอร์เซ็นต์ของอัตราเร็วของเสียงในอากาศ
+	\item ปริมาตรน้ำที่เหลือในถัง \(= \pi R^2 (H-R\tan \theta)\)
+	\item จุดที่ P ชนขั้นบันไดครั้งแรกอยู่ห่างจากกำแพง\( = \SI{0.547}{m} + \SI{0.20}{m}= \SI{0.747}{m}\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

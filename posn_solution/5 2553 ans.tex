@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2553}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \
+	\begin{enumerate}
+		\item \(\dfrac{Mu}{M+m}\)
+		\item \(D=\ell-u\sqrt{\dfrac{Mm}{k(M+m)}}\)
+		\item \(\dfrac{2Mu}{M+m}\)          
+	\end{enumerate}
+	\item \
+	\begin{enumerate}
+		\item \(x = \dfrac{v^2\sin2\theta + gD}{2g}\)
+		\item \(\tau =\dfrac{v^2\sin2\theta - gD}{2vg\cos\theta}\)
+		\item \(y = \dfrac{v^4\sin^2 2\theta - g^2D^2}{8gv^2\cos^2 \theta}\)
+	\end{enumerate}
+	\item \
+	\begin{enumerate}
+		\item \(x=\dfrac{R_1+\sqrt{R_1^2+4R_1R_2}}{2}\)
+		\item \(y=3R\)
+		\item \(\dfrac{32\mathcal{E}}{729R}\)
+		\item \SI{13.2}{\%}
+	\end{enumerate}
+	\item \
+	\begin{enumerate}
+		\item 3 แบบ
+		\item ...
+		\item \(\dfrac{1}{R_2+R_3}:\dfrac{1}{R_1+R_3}:\dfrac{1}{R_1+R_2}\)
+	\end{enumerate}
+	\item 2 ค่า คือ \SI{0}{\degree} และ \SI{21.8}{\degree}
+	\item \
+	\begin{enumerate}
+		\item ...
+		\item \(v=\SI{1.17e5}{m/s}\)
+		\item \(v = \dfrac{E}{\rho Ne}\)
+		\item หาค่าไม่ได้
+	\end{enumerate}
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2552}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item 9 เท่า
+	\item \(u \sqrt{\dfrac{mM}{(m+M)k}}\)
+	\item \(H\)
+	\item \(\sqrt{5gH/2}\)
+	\item \(\omega = u/\ell\)
+	\item \(\dfrac{m_1m_2u^2}{(m_1+m_2)\ell}\)
+	\item \(\dfrac{2A\rho gh}{M}\)
+	\item \(\dfrac{47Q^2}{80\pi \epsilon_{0}a}\)
+	\item \(\dfrac{Q}{4\pi \epsilon_{0}a}\)
+	\item \(\dfrac{C_1}{C_1+C_2}\times 100\%\)
+	\item \(2RP - \mathcal{E}^2\)
+	\item \(V_{AB}=V_0\left[ 1+\left (\dfrac{1}{\omega CR}\right )^2 \right]^{\frac{1}{2}}\sin \left [\omega t-\arctan\left (\dfrac{1}{\omega CR}\right ) \right ]\)
+	\item \(V_{AB}\approx \dfrac{R_2(R_2+R_4)\Delta R}{R_4(R_1+R_2)^2}\mathcal{E}\)
+	\item \(\alpha \approx \dfrac{\omega^2R}{g}\sin \phi \cos \phi\)
+	\item ห่างหน้าผา \(\dfrac{1}{2}(c+v)t\)
+	\item ภาพเสมือน ห่างวัตถุ \(\SI{30}{cm}\)
+	\item ...
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

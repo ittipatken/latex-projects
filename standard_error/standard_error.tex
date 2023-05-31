@@ -1,0 +1,54 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{fontspec}
+\setmainfont{STIX Two Text}
+\newfontfamily{\defaultfont}{STIX Two Text}
+\newfontfamily{\thaifont}[Scale=MatchUppercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin, Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th_TH"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\linespread{1.25}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{unicode-math}
+\setmathfont{STIX Two Math}
+\usepackage[margin=2cm]{geometry}
+
+\DeclareMathOperator{\Var}{Var}
+
+\begin{document}
+\title{Standard Error Derivation}
+\author{อิธิพัฒน์ ธนบดีกาญจน์}
+
+\maketitle
+
+\begin{abstract}
+	Standard Error (SE) หรือ Standard Error of Sample Mean (SEM) หมายถึง ค่าที่แสดงว่าโดยเฉลี่ยแล้วค่าเฉลี่ยของตัวอย่างแต่ละตัวแตกต่างจากค่าเฉลี่ยของประชากรมากน้อยเพียงใด หรือเขียนในรูปแบบสมการคณิตศาสตร์ได้ว่า \(\text{Standard Error} = \sqrt{\Var(\mu)}\) โดย \(\mu = \text{mean of sample mean}\) และสามารถคำนวณได้จาก \(s/\sqrt{n}\) ซึ่งสามารถพิสูจน์ได้โดยใช้สมบัติของ variance
+\end{abstract}
+\section{พิสูจน์}
+กำหนด sample mean หรือค่าเฉลี่ยของค่าเฉลี่ย เป็น \(\bar{x}_1, \bar{x}_2, \bar{x}_3,\dots, \bar{x}_k\)\\
+จากนิยาม
+\begin{equation}
+	\text{Standard Error} = \sqrt{\Var(\mu)} = \sqrt{\Var\left(\frac{\sum_{i=1}^{k}\bar{x}_k}{k}\right)}
+\end{equation}
+ใช้สมบัติของ variance เมื่อ แต่ละ sample ไม่ขึ้นต่อกัน (independent) และ \(\Var(aX) = a^2\Var(X)\) จึงได้ว่า
+\begin{equation*}
+	\Var\left(\frac{\sum_{i=1}^{k}\bar{x}_k}{k}\right)=\frac{1}{k^2}\sum_{i=1}^{k}\Var(\bar{x}_k)=\frac{1}{k^2}\sum_{i=1}^{k}s^2
+\end{equation*}
+เนื่องจาก \(s^2\) ไม่ขึ้นกับ \(k\) ดังนั้น
+\begin{equation*}
+	\frac{1}{k^2}\sum_{i=1}^{k}s^2=\frac{1}{k^2}(ks^2)=\frac{s^2}{k}
+\end{equation*}
+\begin{equation}
+	\text{Standard Error} = \sqrt{\frac{s^2}{k}} = \frac{s}{\sqrt{k}}\;\square
+\end{equation}
+\end{document}

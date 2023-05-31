@@ -1,0 +1,348 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\setmainfont{STIX Two Text}
+\newfontfamily{\englishfont}{STIX Two Text}
+\newfontfamily{\thaifont}[Script=Thai, Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguage{english}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+
+\usepackage{unicode-math}
+\setmathfont{STIX Two Math}
+
+\usepackage[Latin, Thai]{ucharclasses}
+\setDefaultTransitions{\englishfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th_TH"
+\linespread{1.25}
+
+\pagestyle{fancy}
+\rhead{Ittipat}
+\lhead{สรุปสมการฟิสิกส์จากหนังสือแบบเรียน สสวท. 2560 (พิมพ์ครั้งที่ 2)}
+
+\begin{document}
+	\begin{center}
+		\hspace*{1.05cm}\color[HTML]{F47820}{\textbf{\Large{เล่ม 1}}}
+	\end{center}
+	\hspace*{1.05cm}\textbf{บทที่ 1 ธรรมชาติและพัฒนาการทางฟิสิกส์}
+\begin{enumerate}
+	\item ค่าความคลาดเคลื่อน
+		\[\Delta \overbar{x}=\frac{x_\text{max}-x_\text{min}}{2}\]
+	\textbf{บทที่ 2 การเคลื่อนที่แนวตรง}
+	\item สมการการเคลื่อนที่แนวตรงด้วยความเร่งคงตัว
+		\begin{align*}
+			v_x&=u_x+a_xt\\
+			\Delta x&=\left(\frac{u_x+v_x}{2}\right)t\\
+			\Delta x&=u_xt+\frac{1}{2}a_xt^2\\
+			v_x^2&=u_x^2+2a_x\Delta x
+		\end{align*}
+	\textbf{บทที่ 3 แรงและกฎการเคลื่อนที่}
+	\item กฎการเคลื่อนที่ข้อที่สองของนิวตัน
+		\[\sum \vec{F}=m\vec{a}\]
+	\item แรงเสียดทานสถิต
+		\[f_{\text{s}}\leq\mu_\text{s}N\]
+	\item แรงเสียดทานจลน์
+		\[f_\text{k}=\mu_\text{k}N\]
+	\item กฎความโน้มถ่วงสากล
+		\[F_\text{G}=\frac{Gm_1m_2}{r^2}\]
+	\item น้ำหนักของวัตถุ
+		\[\vec{W}=m\vec{g}\]
+	\begin{center}
+		\color[HTML]{F47820}{\textbf{\Large{เล่ม 2}}}
+	\end{center}
+	\textbf{บทที่ 4 สมดุลกล}
+	\item สมดุลต่อการเลื่อนที่
+		\[\sum \vec{F}=0\]
+	\item โมเมนต์ของแรง
+		\[M=Fl=Fr\sin\theta\]
+	\item สมดุลต่อการหมุน
+		\[\sum M=0\]
+	\textbf{บทที่ 5 งานและพลังงาน}
+	\item งานเนื่องจากแรงคงตัว
+		  \[W=\vec{F}\cdot\Delta \vec{x}=F_x\Delta x\cos\theta\]
+	\item งานเนื่องจากแรงดึงดูดของโลกบริเวณใกล้ผิวโลก
+		\[W_{\text{gravity}}=-mg\Delta h\]
+	\item กำลังเฉลี่ย
+		\[P_{\text{av}}=\frac{W}{\Delta t}\]
+	\item พลังงานจลน์ของวัตถุ
+		\[E_\text{k}=\frac{1}{2}mv^2\]
+	\item ทฤษฎีบทงาน-พลังงานจลน์
+		\[W=E_\mathrm{k_f}-E_\mathrm{k_i}\]
+	\item พลังงานศักย์โน้มถ่วงของวัตถุเทียบกับพื้นดิน
+		\[E_\text{p}=mgh\]
+	\item กฎของฮุก
+		\[F_\text{s}=-kx\]
+	\item พลังงานศักย์หยืดหยุ่นของสปริง
+		\[E_\mathrm{p_s}=\frac{1}{2}kx^2\]
+	\item กฎการอนุรักษ์พลังงานกล
+		\[ E=E_\text{k}+E_\text{p}= \text{ค่าคงตัว}\]
+	\item ประสิทธิภาพของเครื่องกล
+		\[\text{Efficiency}=\frac{W_{\text{out}}}{W_{\text{in}}}\times100\%\]
+	\item การได้เปรียบเชิงกล
+		\[\text{M.A.}=\frac{F_\text{out}}{F_\text{in}}=\frac{s_\text{in}}{s_\text{out}}\]
+	\textbf{บทที่ 6 โมเมนตัมและการชน}
+	\item โมเมนตัม
+		\[\vec{p}=m\vec{v}\]
+	\item กฎการเคลื่อนที่ข้อที่สองของนิวตันอีกแบบหนึ่ง
+		\[\sum \vec{F}=\frac{\Delta \vec{p}}{\Delta t}\]
+	\item การดล
+		\[\vec{I}=\left(\sum \vec{F} \right) \Delta t=\Delta \vec{p}\]
+	\item กฎการอนุรักษ์โมเมนตัม
+		\[\vec{p}_\text{i}=\vec{p}_\text{f}\]
+	\textbf{บทที่ 7 การเคลื่อนที่แนวโค้ง}
+	\item ความสัมพันธ์ระหว่างความถี่และคาบ
+		\[f=\frac{1}{T}\]
+	\item อัตราเร็วเชิงมุม
+		\[v=\omega r\]
+	\item แรงสู่ศูนย์กลาง
+	\[F_\text{c}=\frac{mv^2}{r}=m\omega^2r\]
+	\begin{center}
+		\color[HTML]{F47820}{\textbf{\Large{เล่ม 3}}}
+	\end{center}
+	\textbf{บทที่ 8 การเคลื่อนที่แบบฮาร์มอนิกอย่างง่าย}
+	\item การกระจัดของการเคลื่อนที่แบบฮาร์มอนิกอย่างง่าย
+		\[x=A\sin(\omega t+\phi)\]
+	\item อัตราเร็วเชิงมุมและความถี่เชิงมุม
+		\[\omega=\frac{\Delta \theta}{\Delta t}=\frac{2\pi}{T}=2\pi f\]
+	\item ความเร็วของการเคลื่อนที่แบบฮาร์มอนิกอย่างง่าย
+		\[v=A\omega\cos(\omega t +\phi)\]
+	\item ความเร่งของการเคลื่อนที่แบบฮาร์มอนิกอย่างง่าย
+		\[a=-A\omega^2\sin(\omega t +\phi)=-\omega^2x\]
+	\item อัตราเร็วของการเคลื่อนที่แบบฮาร์มอนิกอย่างง่าย
+		\[v=\pm\omega\sqrt{A^2-x^2}\]
+	\item ความถี่เชิงมุมของการสั่นของมวลติดปลายสปริง
+		\[\omega=\sqrt{\frac{k}{m}}\]
+	\item ความถี่เชิงมุมของการแกว่งของลูกตุ้มอย่างง่าย
+		\[\omega=\sqrt{\frac{g}{l}}\]
+	\textbf{บทที่ 9 คลื่น}
+	\item มุมตกกระทบเท่ากับมุมสะท้อน
+		\[\theta_i=\theta_r\]
+	\item การหักเหของคลื่น
+		\[\frac{\sin\theta_1}{\sin\theta_2}=\frac{v_1}{v_2}\]
+	\item ความต่างเฟสของจุดของจุดบนคลื่น
+		\[\Delta \phi=\Delta r\left(\frac{2\pi}{\lambda}\right)\]
+	\item จุดปฏิบัพ
+		\[\Delta r=|S_1P-S_2P| = n\lambda;\quad n=0,1,2,\dots\]
+	\item จุดบัพ
+		\[\Delta r=|S_1Q-S_2Q| = \left(n-\frac{1}{2}\right)\lambda;\quad n=1,2,\dots\]
+	\textbf{บทที่ 10 แสงเชิงคลื่น}
+	\item การแทรกสอดแบบเสริม
+		\[\Delta r=n\lambda\quad n=0,1,2,\dots\]
+	\item การแทรกสอดแบบหักล้าง
+		\[\Delta r=\left(n-\frac{1}{2}\right)\lambda\quad n=1,2,3,\dots\]
+	
+	\item การเลี้ยวเบนของแสงผ่านสลิตเดี่ยว
+		\[a\sin\theta_n=n\lambda\quad n=1,2,\dots\]
+	\item การเลี้ยวเบนของแสงผ่านเกรตติง
+		\[d\sin\theta_n=n\lambda\]
+	เพิ่มเติม ในกรณีที่ \(d\ll L\) สามารถประมาณได้ว่า \(\Delta r = d\sin\theta\) และในกรณีที่ \(\theta<\SI{10}{\degree}\) สามารถประมาณต่อได้ว่า \(\sin\theta\approx\tan\theta=\frac{x}{L}\)\\
+	\textbf{บทที่ 11 แสงเชิงรังสี}
+	\item ดรรชนีหักเห
+		\[n=\frac{c}{v}\]
+	\item กฎของสเนลล์
+		\[n_1\sin\theta_1=n_2\sin\theta_2\]
+	\item มุมวิกฤต
+		\[\theta_\text{c}=\arcsin\left(\frac{n_2}{n_1}\right)\]
+	\item สมการในการหาความลึกที่ปรากฏเนื่องจากการหักเหของแสง
+		\[\frac{s'}{s}=\frac{n_2}{n_1}\]
+	\item สมการของเลนส์บาง
+		\[\frac{1}{s}+\frac{1}{s'}=\frac{1}{f}\]
+	\item กำลังขยาย
+		\[M=\frac{y'}{y}=-\frac{s'}{s}\]
+	\begin{center}
+		\color[HTML]{F47820}{\textbf{\Large{เล่ม 4}}}
+	\end{center}
+	\textbf{บทที่ 12 เสียง}
+	\item อัตราเร็วเสียง
+		\[v=f\lambda\]
+	\item อัตราเร็วเสียงในอากาศที่ขึ้นกับอุณหภูมิ (ใช้ได้ในช่วง \SI{-50}{\degreeCelsius} ถึง \SI{50}{\degreeCelsius})
+		\[v=331+0.6T_\text{C}\]
+	\item ความเข้มเสียง
+		\[I=\frac{P}{A}\]
+	\item ระดับเสียง
+		\[\beta=10\log\left(\frac{I}{I_0}\right)\]
+	\item ฮาร์มอนิก
+		\[f_n=nf_1\]
+	\item ความสัมพันธ์ระหว่างความถี่การสั่นพ้องกับความยาวของลำอากาศในท่อปลายปิดหนึ่งด้าน
+		\[f_n=\frac{nv}{4L}\]
+	\item ความถี่บีต
+		\[f_b=|f_1-f_2|\]
+	\item เลขมัค
+		\[\text{Mach number}=\frac{v_s}{v}\]
+	\item ความสัมพันธ์ระหว่างเลขมัคและมุมมัค
+		\[\sin\theta=\frac{vt}{v_s t}=\frac{v}{v_s}=\frac{1}{\text{Mach number}}\]
+	\textbf{บทที่ 13 ไฟฟ้าสถิต}
+	\item ขนาดประจุไฟฟ้า
+		\[q=Ne\]
+	\item กฎของคูลอมบ์
+		\[F=\frac{kq_1q_2}{r^2}=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\]
+	\item สนามไฟฟ้า
+		\[E=\frac{F}{q}=\frac{kQ}{r^2}\]
+	\item ศักย์ไฟฟ้า
+		\[V=\frac{U}{q}=\frac{kQ}{r}\]
+	\item ความต่างศักย์ระหว่างสองตำแหน่งในสนามไฟฟ้า
+		\[V_\text{B}-V_\text{A}=\frac{\Delta U}{q}=\Delta V\]
+	\item ความต่างศักย์ระหว่างแผ่นประจุลบเทียบกับแผ่นประจุบวก
+		\[\Delta V=-Ed\]
+	\item ความจุของตัวเก็บประจุ
+		\[C=\frac{Q}{\Delta V}\]
+	\item พลังงานสะสมในตัวเก็บประจุ
+		\[U=\frac{1}{2}Q\Delta V\]
+	\item การต่อตัวเก็บประจุแบบอนุกรม
+		\[\frac{1}{C}=\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}+\dots\]
+	\item การต่อตัวเก็บประจุแบบขนาน
+		\[C=C_1+C_2+C_3+\dots\]
+	\textbf{บทที่ 14 ไฟฟ้ากระแส}
+	\item กระแสไฟฟ้าในตัวนำ
+		\[I=\frac{Q}{\Delta t}=\frac{Nq}{\Delta t}=nev_dA\]
+	\item กฎของโอห์ม
+		\[I=\left( \frac{1}{R}\right) \Delta V\]
+	\item สภาพนำไฟฟ้า
+		\[I=\sigma\frac{A}{\ell}\Delta V\]
+	\item สภาพต้านทานไฟฟ้า
+		\[R=\rho\left( \frac{\ell}{A}\right) \]
+	\item การต่อตัวต้านทานแบบอนุกรม
+		\[R=R_1+R_2+R_2+\dots\]
+	\item การต่อตัวต้านทานแบบขนาน
+		\[\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\dots\]
+	\item อีเอ็มเอฟ
+		\[\mathcal{E}=\Delta V+Ir\]
+	\item พลังงานไฟฟ้า
+		\[W=It\Delta V\]
+	\item กำลังไฟฟ้า
+		\[P=I\Delta V\]
+	\begin{center}
+		\color[HTML]{F47820}{\textbf{\Large{เล่ม 5}}}
+	\end{center}
+	\textbf{บทที่ 15 แม่เหล็กไฟฟ้า}
+	\item ฟลักซ์แม่เหล็ก
+		\[B=\frac{\phi}{A}\]
+	\item ขนาดของแรงแม่เหล็ก
+		\[F=qvB\sin\theta\]
+	\item รัศมีการเคลื่อนที่แบบวงกลมของอนุภาคมีประจุไฟฟ้า
+		\[r=\frac{mv}{qB}\]
+	\item แรงแม่เหล็กกระทำต่อลวดตัวนำที่มีกระแสไฟฟ้าผ่าน
+		\[F=ILB\sin\theta\]
+	\item โมเมนต์ของแรงคู่ควบกระทำต่อขดลวดที่มีกระแสไฟฟ้าผ่าน เมื่ออยู่ในสนามแม่เหล็ก
+		\[M=NIAB\cos\theta\]
+	\item กฏการเหนี่ยวนำของฟาราเดย์และกฏของเลนส์
+		\[\varepsilon=-\frac{\Delta \phi_B}{\Delta t}\]
+	\item ความต่างศักย์ของไฟฟ้ากระแสสลับ
+		\[v=V_0\sin(\omega t)\]
+	\item กระแสไฟฟ้าของไฟฟ้ากระแสสลับ
+		\[i=I_0\sin(\omega t)\]
+	\item ค่ายังผลหรือค่ามิเตอร์ของกระแสไฟฟ้าของไฟฟ้ากระแสสลับ
+		\[I_\text{rms}=\frac{I_0}{\sqrt{2}}\]
+	\item ค่ายังผลหรือค่ามิเตอร์ของความต่างศักย์ของไฟฟ้ากระแสสลับ
+		\[V_\text{rms}=\frac{V_0}{\sqrt{2}}\]
+	\item การสูญเสียกำลังไฟฟ้าในสายไฟฟ้า
+		\[P_\text{loss}=I^2R\]
+	\item หม้อแปลง
+		\[\frac{\mathcal{E}_2}{\mathcal{E}_1}=\frac{N_2}{N_1}\]
+	\textbf{บทที่ 16 ความร้อนและแก๊ส}
+	\item ความจุความร้อน
+		\[C=\frac{Q}{\Delta T}\]
+	\item ความจุความร้อนจำเพาะ
+		\[c=\frac{C}{m}=\frac{Q}{m\Delta T}\implies Q=mc\Delta T\]
+	\item ความร้อนแฝง
+		\[Q=mL\]
+	\item การถ่ายโอนความร้อนและสมดุลความร้อน
+		\[Q_\text{ลด}=Q_\text{เพิ่ม}\]
+	\item กฎของบอยล์
+		\[PV=K_1\]
+	\item กฎของชาร์ล
+		\[\frac{V}{T}=K_2\]
+	\item กฎของเกย์-ลูสแซก
+		\[\frac{P}{T}=K_3\]
+	\item กฎของแก๊สอุดมคติ
+		\[PV=nRT=Nk_\text{B}T\]
+	\item ความสัมพันธ์ระหว่างพลังงานจลน์เฉลี่ยของโมเลกุลของแก๊สและอุณหภูมิ (โมเลกุลแก๊สอะตอมเดี่ยว\textenglish{)}
+		\[\overbar{E}_\text{k}=\frac{3}{2}k_\text{B}T\]
+	\item ความสัมพันธ์ระหว่างอัตราเร็วอาร์เอ็มเอสและอุณหภูมิของโมเลกุลของแก๊ส
+		\[v=\sqrt{\frac{3k_\text{B}T}{m}}\]
+	\item พลังงานภายในระบบ
+		\[U=N\overbar{E}_\text{k}=\frac{3}{2}nRT=\frac{3}{2}Nk_\text{B}T\]
+	\item งานที่ทำโดยแก๊ส
+		\[W=P\Delta V\]
+	\item กฎข้อที่หนึ่งของอุณหพลศาสตร์
+		\[Q=\Delta U+W\]
+	\textbf{บทที่ 17 ของแข็งและของเหลว}
+	\item ความเค้นตามยาว
+		\[\sigma=\frac{F}{A}\]
+	\item ความเครียดตามยาว
+		\[\varepsilon=\frac{\Delta L}{L_0}\]
+	\item มอดุลัสของยัง
+		\[Y=\frac{\sigma}{\varepsilon}=\frac{F/A}{\Delta L/L_0}\]
+	\item ความตึงผิว
+		\[\gamma=\frac{F}{\ell}\]
+	\item ความดันในของไหล
+		\[P=\frac{F}{A}\]
+	\item ความดันสัมบูรณ์
+		\[P=P_0+\rho g h\]
+	\item ความดันเกจ
+		\[P_g=P-P_0=\rho gh\]
+	\item หลักอาร์คิมีดีส
+		\[F_B=\rho Vg\]
+	\item สมการความต่อเนื่อง
+		\[R=Av=\text{ค่าคงตัว}\]
+	\item สมการแบร์นูลลี
+		\[P+\frac{1}{2}\rho v^2+\rho gh=\text{ค่าคงตัว}\]
+	\begin{center}
+		\color[HTML]{F47820}{\textbf{\Large{เล่ม 6}}}
+	\end{center}
+	\textbf{บทที่ 18 คลื่นแม่เหล็กไฟฟ้า}\\
+	\textbf{บทที่ 19 ฟิสิกส์อะตอม}
+	\item สมมติฐานของพลังค์
+		\[E=n\varepsilon=nhf\]
+	\item โมเมนตัมเชิงมุมของอิเล็กตรอนที่โคจรรอบนิวเคลียส
+		\[L=mvr=n\hbar\]
+	\item การแผ่คลื่นแม่เหล็กไฟฟ้าเมื่ออิเล็กตรอนเปลี่ยนวงโคจร
+	 	\[hf=E_\text{i}-E_\text{f}\]
+	\item รัศมีโบร์
+	 	\[r_n=r_1n^2=a_0n^2\]
+	\item ความยาวคลื่นของแสงในสเปกตรัมแบบเส้น
+		\[\frac{1}{\lambda}=R_\text{H}\left(\frac{1}{n^2_\text{f}}-\frac{1}{n^2_{\text{i}}}\right)\]
+	\item พลังงานของอิเล็กตรอนในอะตอม
+		\[E_n=-\frac{\SI{13.6}{eV}}{n^2}\] 
+	\item โฟโตอิเล็กทริก
+		\[E_\mathrm{k_\text{max}}=eV_s=hf-W\]
+	\item สมมติฐานของเดอบรอยล์
+		\[\lambda=\frac{h}{p}\]
+	\textbf{บทที่ 20 ฟิสิกส์นิวเคลียร์และฟิสิกส์อนุภาค}
+	\item พลังงานยึดเหนี่ยวและพลังงานนิวเคลียร์
+		\[E=(\Delta m)c^2\]
+	\item การสลายให้แอลฟา
+	\begin{center}
+		\ch{^A_ZX -> ^{A-4}_{Z-2}Y + ^42He}
+	\end{center}
+	\item การสลายให้บีตาลบ
+	\begin{center}
+		\ch{^A_ZX -> ^{A}_{Z+1}Y + ^0_{-1}e + \(\overbar{\nu}_e\)}
+	\end{center}
+	\item การสลายให้บีตาบวก
+	\begin{center}
+		\ch{^A_ZX -> ^{A}_{Z-1}Y + ^0_{+1}e + \(\nu_e\)}
+	\end{center}
+	\item การสลายให้แกมมา
+	\begin{center}
+		\ch{^A_ZX^* -> ^A_ZX + \(\gamma\)}
+	\end{center}
+	\item กัมมันตภาพ
+		\[A=\lambda N\]
+	\item ความสัมพันธ์ของจำนวนนิวเคลียสเริ่มต้น ค่าคงตัวการสลาย และเวลาที่เกิดการสลาย
+		\[N=N_0e^{-\lambda t}\]
+	\item ครึ่งชีวิต
+		\[T_\frac{1}{2}=\frac{\ln 2}{\lambda}\approx\frac{0.693}{\lambda}\]
+\end{enumerate}
+\end{document}

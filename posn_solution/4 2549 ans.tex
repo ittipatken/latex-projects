@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{4} 2549}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \(4 + 2\sqrt{3}\,\si{s} = \SI{7.464}{s} = \SI{7.5}{s}\)
+	\item  a = \(\dfrac{\left(v_A - v_B\right)^2}{2d}\)
+	\item ชนกันที่ความสูง \(\dfrac{3u^2}{8g}\)
+	\item \(m = \SI{25}{g}\)
+	\item ดัชนีหักเห \(= \sqrt 2 = 1.414\)
+	\item \(v = u \sqrt{\dfrac{\sin \theta - \mu \cos \theta}{\sin \theta + \mu \cos \theta}}\)
+	\item \( \theta = \arctan \left (1/(2\mu_s)\right )\)
+	\item โวลต์มิเตอร์อ่านค่าได้ \(\SI{40}{V}\)
+	\item ความยาวโฟกัสเท่ากับ \(\SI{40}{m}\)
+	\item เบนไป \(\SI{40}{\degree}\)
+	\item \
+	\begin{enumerate}
+		\item ความเร่งมีทิศขึ้น ขนาด \(\SI{2.7}{m/s^2}\)
+		\item เมื่อที่แขวนหลุด ตาชั่งอ่านได้ศูนย์
+	\end{enumerate}
+	\item \
+	\begin{enumerate}
+		\item ขนาดความเร็วต้น \(= \SI{20}{m/s}\)
+		\item ช่วงเวลาที่แรงกระทำ \(= \SI{1.0}{s}\)
+	\end{enumerate}
+	\item \
+	\begin{enumerate}
+		\item การกระจัดเท่ากับ \(+2\,\si{m}\)
+		\item ระยะทางที่อนุภาคเคลื่อนที่ได้เท่ากับ \(\SI{8}{m}\)
+	\end{enumerate}
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

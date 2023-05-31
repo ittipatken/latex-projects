@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{5} 2556}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item ความเร็ว \(=\dfrac{m}{M+m}v_0\), พลังงานศักย์ของระบบ \(=\dfrac{Mmv_0^2}{2(M+m)}\)
+	\item \(2R\sin ^2\theta \cos \theta \)
+	\item \(\sqrt{\dfrac{2m^{2}gh}{M^{2}+mM}}\)
+	\item \(\dfrac{2e}{1-e}\sqrt{\dfrac{2h}{g}}\)
+	\item \(\dfrac{1}{2} ( C_{1} + C_{2} + C_{3} ) V^{2}\)
+	\item \(\sqrt{2}I_0R\)
+	\item \(\dfrac{2\pi \gamma m}{eB}\)
+	\item \
+	\begin{enumerate}
+		\item \(f_{1}-f_{2}\)
+		\item \(\left(\dfrac{f_{1}}{f_{2}}\right)^{2}\)
+		\item \(\dfrac{f_{1}f_{2}}{f_{2}-f_{1}}\)
+	\end{enumerate}
+	\item \(T=\dfrac{K_1\ell_2T_0+K_2\ell_1T_1}{K_1\ell_2+K_2\ell_1}\)
+	\item \(v_m=\left(\dfrac{4\gamma g}{\rho }\right)^{1/4}=\SI{23.3}{cm/s}\)
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

@@ -1,0 +1,116 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{CMU Serif}
+
+\newfontfamily{\englishfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchUppercase]{TH Sarabun Chula}
+\newenvironment{thailang}{\thaifont}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setTransitionTo{Thai}{\thaifont}
+\setTransitionFrom{Thai}{\englishfont}
+
+\XeTeXlinebreaklocale "th_TH"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{physics}
+\usepackage{circuitikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\title{การแก้หาความต้านทานรวมด้วยเทคนิคยุบจุด}
+\author{อิธิพัฒน์ ธนบดีกาญจน์}
+
+\tikzset{
+	declare function={% in case of CVS which switches the arguments of atan2
+		atan3(\a,\b)=ifthenelse(atan2(0,1)==90, atan2(\a,\b), atan2(\b,\a));},
+	kinky cross radius/.initial=+.125cm,
+	@kinky cross/.initial=+, kinky crosses/.is choice,
+	kinky crosses/left/.style={@kinky cross=-},kinky crosses/right/.style={@kinky cross=+},
+	kinky cross/.style args={(#1)--(#2)}{
+		to path={
+			let \p{@kc@}=($(\tikztotarget)-(\tikztostart)$),
+			\n{@kc@}={atan3(\p{@kc@})+180} in
+			-- ($(intersection of \tikztostart--{\tikztotarget} and #1--#2)!%
+			\pgfkeysvalueof{/tikz/kinky cross radius}!(\tikztostart)$)
+			arc [ radius     =\pgfkeysvalueof{/tikz/kinky cross radius},
+			start angle=\n{@kc@},
+			delta angle=\pgfkeysvalueof{/tikz/@kinky cross}180 ]
+			-- (\tikztotarget)}}}
+\begin{document}
+\maketitle
+	\section{บทนำ}
+	การแก้หาความต้านทานรวมนั้นในเบื้องต้นเราจะยุบวงจรด้วยสูตร
+		\begin{figure}[h]
+			\begin{center}
+			$\displaystyle{R_{eq}=\sum_{i=1}^{N}R_i}$ หรือ $\displaystyle{R_{eq}=R_1+R_2+\dots+R_N}$
+			\caption{ต่ออนุกรม}
+			\end{center}
+		\end{figure}
+		\begin{figure}[h]
+			\begin{center}
+				$\displaystyle{\frac{1}{R_{eq}}=\sum_{i=1}^{N}\frac{1}{R_{i}}}$ หรือ $\displaystyle{\frac{1}{R_{eq}}=\frac{1}{R_1}+\frac{1}{R_2}+\dots+\frac{1}{R_N}}$
+				\caption{ต่อขนาน}
+			\end{center}
+			แต่ในปัญหาที่ซับซ้อนขึ้นเราจะใช้เทคนิคต่าง ๆ มาช่วยแก้ปัญหา โดยผู้เขียนจะแสดงเพียงเทคนิคเดียว ในบทความนี้เท่านั้นคือ ยุบจุดในวงจรไฟฟ้าที่มีความต่างศักย์ไฟฟ้าเป็น 0 V เป็นจุดเดียวกัน ถ้าอธิบายให้เห็นภาพก็จะยกตัวอย่างว่า ถ้าเรานำจุด 2 จุดนั้นที่มีความต่างศักย์เป็น 0 V มาติดกัน ก็จะไม่มีความแตกต่างจากนำจุด 2 จุดนั้นวางห่าง ๆ กันเลยเพราะสุดท้ายเราก็วัดความต่างศักย์คร่อมจุดนั้นได้ 0 V อยู่ดี
+		\end{figure}
+	\section{ตัวอย่างการแก้โจทย์ปัญหา}
+		\begin{center}
+			\begin{circuitikz}
+				\draw
+				(0,4)  node[anchor=east] {D} to[R] (4,4) coordinate (b-c)
+				to[short] (0,0) coordinate (a-d);
+				\draw
+				(4,4) node[anchor=west] {C} to[R] (4,0)
+				to[R] (0,0);
+				\draw
+				(0,0) node[anchor=east] {A} to[R] (0,4)
+				to[kinky cross=(a-d)--(b-c), kinky crosses=left] (4,0) node[anchor=west] {B};
+
+			\end{circuitikz}
+		\end{center}
+	กำหนด ความต้านทานของตัวต้านทานแต่ละตัวมีค่าเท่ากับ $R$ จงหาความต้านทานความระหว่างจุด A กับ B\\
+	
+	พิจารณาจากรูปจะพบว่า มีสายไฟเปล่า (ไม่มีตัวต้านทาน) เชื่อมระหว่าง A กับ C และ D กับ B อยู่ดังนั้นเราสามารถยุบเป็นจุดเดียวกันได้ โดยให้เหตุผลว่า มีความต่างศักย์เป็น 0 V ระหว่างกัน ดังนั้นเราสามารถวาดวงจรใหม่ โดยมีเพียง 2 จุด คือ จุด A,C และ จุด D,B จากนั้นเราจะสังเกตว่า ตัวต้านทานนั้นเชื่อมระหว่างจุดอะไรกับอะไร จะได้
+		\begin{center}
+			\begin{circuitikz}
+				\draw
+				(0,0)  node[anchor=east]{A} to[R] (4,0) node[anchor=west]{D};
+				\draw
+				(0,-1) node[anchor=east]{A} to[R] (4,-1) node[anchor=west]{B};
+				\draw
+				(0,-2) node[anchor=east]{C} to[R] (4,-2) node[anchor=west]{D};
+				\draw
+				(0,-3) node[anchor=east]{C} to[R] (4,-3) node[anchor=west]{B};
+			\end{circuitikz}
+		\end{center}
+	จากนั้นรวม A กับ C เป็นจุดเดียวกัน และ B กับ D เป็นจุดเดียวกัน เขียนเป็นวงจรใหม่ได้ดังนี้
+		\begin{center}
+			\begin{circuitikz}
+				\draw
+				(0,0) node[anchor=east]{A,C} -- (1,0);
+				\draw
+				(1,0) -- (1,1.5)
+				to[R] (4,1.5) -- (4,0);
+				\draw
+				(1,0.5) to[R] (4,0.5);
+				\draw
+				(1,-0.5) to[R] (4,-0.5);
+				\draw
+				(1,0) -- (1,-1.5)
+				to[R] (4,-1.5) -- (4,0);
+				\draw
+				(4,0) -- (5,0) node[anchor=west]{B,D};
+			\end{circuitikz}
+		\end{center}
+	เราจะพบว่าหลังจากยุบวงจรแล้ว กลายเป็นวงจรต่อขนานทั่วไป ดังนั้นเราสามารถแก้หา $R_{eq}$ จากสูตรตัวต้านทานต่อขนานกันได้\\
+	$$\frac{1}{R_{eq}}=\frac{1}{R}+\frac{1}{R}+\frac{1}{R}+\frac{1}{R}$$
+	$$\therefore R_{eq}=\frac{R}{4}$$
+	
+\end{document}

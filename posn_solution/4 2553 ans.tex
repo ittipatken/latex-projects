@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+	{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. ม.\textenglish{4} 2553}}\\
+	พิมพ์โดย Ittipat\\
+\end{center}
+\begin{enumerate}
+	\item \
+	\begin{enumerate}
+		\item \SI{800}{kg/m^3}
+		\item \SI{0.1}{m}
+	\end{enumerate}
+	\item \(\arcsin (0.33)\)
+	\item ภาพสูง  \SI{1.14}{cm}  เป็นภาพเสมือน หัวตั้ง
+	\item \SI{5.86}{W}, \SI{3.52}{W}
+	\item \SI{19}{\celsius}
+	\item \(P\propto v^3\)
+	\item \
+	\begin{enumerate}
+		\item \SI{15.8}{m/s} ทิศตะวันตก
+		\item \SI{6.3}{m/s^2}
+		\item \SI{6.6}{m/s^2}
+	\end{enumerate}
+	\item มีพลังงานจลน์ \(=mgH(e^{2n})\), กระดอนขึ้นไปสูง \(=He^{2n}\)  
+	\item \
+	\begin{enumerate}
+		\item \(\mu_k mg\)  ทิศไปทางซ้ายมือ
+		\item \(\mu_k\left( \dfrac{m}{M}\right)  g \)   ทิศไปทางขวามือ
+		\item \(\dfrac{u^2}{2\mu_k g} \left(\dfrac{mM}{(m+M)^2}\right)\)  เทียบกับโลก
+		\item \(\dfrac{u^2}{2\mu_k g}\left(1- \dfrac{m}{M}\right)\)
+		\item \SI{0}{N}  ไม่มีทิศทาง
+	\end{enumerate}
+	\item \SI{0}{m/s^2}
+\end{enumerate}
+\vfill	
+\begin{center}
+	\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+\end{center}
+\end{document}

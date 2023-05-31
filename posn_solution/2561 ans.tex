@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{fontspec}
+\newfontfamily{\defaultfont}{CMU Serif}
+\newfontfamily{\thaifont}[Scale=MatchLowercase]{TH Sarabun Chula}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{thai}
+\setotherlanguages{english}
+
+\usepackage[Latin,Thai]{ucharclasses}
+\setDefaultTransitions{\defaultfont}{}
+\setTransitionTo{Thai}{\thaifont}
+
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 0pt
+
+\linespread{1.25}
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[ISO]{diffcoeff}
+\usepackage{siunitx}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+\begin{document}
+	\thispagestyle{empty}
+	\begin{center}
+		{\huge \textbf{เฉลยข้อสอบคัดเข้าค่ายฟิสิกส์สอวน. 2561}}\\
+		พิมพ์โดย Ittipat\\
+	\end{center}
+	\begin{multicols}{2}
+		แบบเลือกคำตอบ
+		\begin{enumerate}
+			\item D
+			\item A
+			\item B
+			\item B
+			\item A
+			\item A
+			\item C
+			\item B
+			\item A
+			\item C
+			\item C
+			\item B
+			\item D
+			\item C
+			\item C
+			\item C
+			\item B
+			\item B
+			\item A
+			\item C
+		\end{enumerate}
+		\columnbreak
+		แบบเติมคำ
+		\begin{enumerate}
+			\item \SI{980}{m}
+			\item \(m(a+g\tan\theta)\)
+			\item \(\dfrac{1}{\sqrt{3}}\)
+			\item \(\sqrt{gL\sin\theta}\)
+			\item \SI{32}{m/s}
+			\item \SI{51}{J}
+			\item ลดลง \SI{0.75}{A}
+			\item \(1.8\) เท่า
+			\item \SI{54}{\celsius}
+			\item \SI{8}{cm}
+		\end{enumerate}
+	\vspace*{\fill}\null
+	\end{multicols}
+	\vfill
+	\begin{center}
+		\href{http://mpec.sc.mahidol.ac.th/forums/}{mpec.sc.mahidol.ac.th/forums}
+	\end{center}
+\end{document}
